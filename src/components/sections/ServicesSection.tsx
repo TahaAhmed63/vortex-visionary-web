@@ -13,7 +13,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ icon, title, description, delay }: ServiceCardProps) => {
   return (
     <div 
-      className="feature-card"
+      className="feature-card group"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex flex-col h-full">

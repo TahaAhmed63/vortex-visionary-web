@@ -131,7 +131,7 @@
   }
 
   .feature-card {
-    @apply group relative overflow-hidden bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 
+    @apply relative overflow-hidden bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 
     border border-gray-100 hover:border-primary/20;
   }
 }
