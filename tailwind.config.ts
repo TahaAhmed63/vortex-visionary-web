@@ -25,6 +25,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'midnight-blue': '#0A192F',
+				'jet-black': '#000000',
+				'electric-blue': '#007BFF',
+				'neon-purple': '#8A2BE2',
+				'cool-gray': 'hsl(var(--cool-gray))',
+				'gold': 'hsl(var(--gold))',
+				'gold-dark': 'hsl(var(--gold-dark))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -113,7 +120,11 @@ export default {
 				'pulse-light': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.7' }
-				}
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 15px rgba(138, 43, 226, 0.3)' },
+					'50%': { boxShadow: '0 0 25px rgba(138, 43, 226, 0.8)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -127,11 +138,14 @@ export default {
 				'enter': 'fade-in 0.5s ease-out, scale-in 0.3s ease-out',
 				'exit': 'fade-out 0.5s ease-out, scale-out 0.3s ease-out',
 				'float': 'float 4s ease-in-out infinite',
-				'pulse-light': 'pulse-light 2s ease-in-out infinite'
+				'pulse-light': 'pulse-light 2s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'hero-pattern': 'linear-gradient(to right, rgba(23, 23, 23, 0.9), rgba(23, 23, 23, 0.6)), url("/hero-bg.jpg")'
+				'hero-pattern': 'linear-gradient(to right, rgba(10, 25, 47, 0.9), rgba(0, 0, 0, 0.8)), url("/hero-bg.jpg")',
+				'gold-gradient': 'linear-gradient(to right, #FFD700, #DAA520)',
+				'blue-purple-gradient': 'linear-gradient(135deg, #007BFF, #8A2BE2)',
 			},
 			transitionProperty: {
 				'height': 'height',
@@ -142,6 +156,11 @@ export default {
 			},
 			transitionDuration: {
 				'400': '400ms',
+			},
+			boxShadow: {
+				'neon-blue': '0 0 5px rgba(0, 123, 255, 0.5), 0 0 20px rgba(0, 123, 255, 0.3)',
+				'neon-purple': '0 0 5px rgba(138, 43, 226, 0.5), 0 0 20px rgba(138, 43, 226, 0.3)',
+				'gold': '0 0 5px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3)',
 			},
 		}
 	},
