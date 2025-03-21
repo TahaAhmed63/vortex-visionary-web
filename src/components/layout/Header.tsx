@@ -11,6 +11,7 @@ const Header = () => {
   // Navigation items
   const navItems = [
     { name: 'Services', href: '#services' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Case Studies', href: '#case-studies' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'Blog', href: '#blog' },
@@ -28,14 +29,14 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-white/80 backdrop-blur-md shadow-sm py-3' 
+        ? 'bg-midnight-blue/90 backdrop-blur-md shadow-sm py-3' 
         : 'bg-transparent py-5'
     }`}>
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+            <span className="text-xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-electric-blue to-neon-purple">
               Vortex Solution
             </span>
           </Link>
@@ -46,7 +47,7 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="font-medium text-sm text-gray-700 hover:text-primary transition-colors duration-200 link-hover"
+                className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200 link-hover"
               >
                 {item.name}
               </a>
@@ -56,7 +57,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-lg"
+              className="bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-neon-purple/30"
               onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get a Quote
@@ -67,7 +68,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex items-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100"
+              className="flex items-center p-2 rounded-md text-white hover:text-electric-blue hover:bg-white/10"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -76,13 +77,13 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg animate-fade-in">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-midnight-blue/95 shadow-lg animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 hover:text-primary"
+                  className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -90,7 +91,7 @@ const Header = () => {
               ))}
               <div className="px-3 py-3">
                 <Button
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-md px-4 py-2 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90 text-white font-medium rounded-md px-4 py-2 transition-all duration-300"
                   onClick={() => {
                     document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
                     setMobileMenuOpen(false);

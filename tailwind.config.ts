@@ -62,7 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Dark theme colors
+				'midnight-blue': '#0A192F',
+				'jet-black': '#000000',
+				'electric-blue': '#007BFF',
+				'neon-purple': '#8A2BE2',
+				'cool-gray': '#A9A9A9',
+				gold: '#FFD700',
+				'gold-dark': '#DAA520',
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
@@ -131,7 +139,7 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'hero-pattern': 'linear-gradient(to right, rgba(23, 23, 23, 0.9), rgba(23, 23, 23, 0.6)), url("/hero-bg.jpg")'
+				'hero-pattern': 'linear-gradient(to right, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.6)), url("/hero-bg.jpg")'
 			},
 			transitionProperty: {
 				'height': 'height',
@@ -142,6 +150,10 @@ export default {
 			},
 			transitionDuration: {
 				'400': '400ms',
+			},
+			boxShadow: {
+				'neon-blue': '0 0 15px rgba(0, 123, 255, 0.5)',
+				'neon-purple': '0 0 15px rgba(138, 43, 226, 0.5)',
 			},
 		}
 	},

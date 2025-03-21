@@ -9,6 +9,7 @@ import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 
 const Index = () => {
   useEffect(() => {
@@ -67,6 +68,7 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         <ServicesSection />
+        <ProjectsSection />
         <QuoteFormSection />
         <CaseStudiesSection />
         <TestimonialsSection />
