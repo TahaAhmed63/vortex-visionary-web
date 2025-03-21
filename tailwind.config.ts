@@ -63,14 +63,23 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Dark theme colors
-				'midnight-blue': '#0A192F',
+				// Theme colors
+				'black': '#000000',
+				'dark-black': '#121212',
+				'pinkish-red': '#FF3366',
+				'pinkish-red-light': '#FF6699',
+				'pinkish-red-dark': '#CC2952',
+				'pure-white': '#FFFFFF',
+				'off-white': '#F5F5F5',
+				'light-gray': '#E0E0E0',
+				'dark-gray': '#333333',
+				'midnight-blue': '#090909', // Changed to near-black
 				'jet-black': '#000000',
-				'electric-blue': '#007BFF',
-				'neon-purple': '#8A2BE2',
-				'cool-gray': '#A9A9A9',
-				gold: '#FFD700',
-				'gold-dark': '#DAA520',
+				'electric-blue': '#FF3366', // Changed to pinkish-red
+				'neon-purple': '#FF3366', // Changed to pinkish-red
+				'cool-gray': '#E0E0E0', // Changed to light gray
+				gold: '#FFFFFF', // Changed to white
+				'gold-dark': '#F5F5F5', // Changed to off-white
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
@@ -139,7 +148,7 @@ export default {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-				'hero-pattern': 'linear-gradient(to right, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.6)), url("/hero-bg.jpg")'
+				'hero-pattern': 'linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("/hero-bg.jpg")'
 			},
 			transitionProperty: {
 				'height': 'height',
@@ -152,8 +161,8 @@ export default {
 				'400': '400ms',
 			},
 			boxShadow: {
-				'neon-blue': '0 0 15px rgba(0, 123, 255, 0.5)',
-				'neon-purple': '0 0 15px rgba(138, 43, 226, 0.5)',
+				'neon-blue': '0 0 15px rgba(255, 51, 102, 0.5)', // Updated to pinkish-red
+				'neon-purple': '0 0 15px rgba(255, 51, 102, 0.5)', // Updated to pinkish-red
 			},
 		}
 	},
