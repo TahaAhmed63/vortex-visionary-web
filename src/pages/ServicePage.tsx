@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Header from "@/components/layout/Header";
@@ -230,7 +229,7 @@ const services = {
     process: [
       {
         title: 'Strategy & Planning',
-        description: 'We define your app's objectives, target audience, and key features.'
+        description: 'We define your app\'s objectives, target audience, and key features.'
       },
       {
         title: 'UI/UX Design',
