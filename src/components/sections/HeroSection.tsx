@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronRight, ArrowRight, Star, Sparkles } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -11,7 +11,7 @@ const HeroSection = () => {
       const scrollY = window.scrollY;
       if (heroRef.current) {
         // Parallax effect
-        heroRef.current.style.transform = `translateY(${scrollY * 0.2}px)`;
+        heroRef.current.style.transform = `translateY(${scrollY * 0.1}px)`;
       }
     };
 
@@ -20,72 +20,128 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-gray-100 to-gray-200">
-      {/* Abstract background shapes */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-400 rounded-full blur-3xl transform translate-x-1/2 translate-y-1/2"></div>
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-400 rounded-full blur-3xl"></div>
+    <section className="relative min-h-screen flex items-center py-20 overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-pinkish-red/30 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pinkish-red/5 rounded-full blur-[80px]"></div>
       </div>
 
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Hero content */}
-          <div className="space-y-6 text-center lg:text-left">
-            <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full animate-fade-in">
-              AI-Powered Innovation
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Transform Your Business With <span className="text-gradient">Intelligent</span> Solutions
+          <div className="space-y-8 text-center lg:text-left">
+            <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30">
+              <Sparkles className="w-4 h-4 mr-2 text-pinkish-red" />
+              <span className="text-sm font-medium text-pinkish-red">AI-Powered Innovation</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              Transform Your <span className="text-gradient">Digital</span> Experience
             </h1>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto lg:mx-0">
-              Leverage the power of AI-driven technologies to accelerate growth, enhance customer experience, and streamline operations with our cutting-edge software solutions.
+            
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
+              Leverage the power of AI-driven technologies to accelerate growth, enhance customer experience, and streamline operations.
             </p>
+            
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
               <Button
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium rounded-md px-8 py-6 transition-all duration-300 shadow-md hover:shadow-lg"
+                size="lg"
+                className="w-full sm:w-auto"
                 onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Started <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
+              
               <Button
                 variant="outline"
-                className="border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900 rounded-md px-6 py-6 transition-all duration-300"
+                size="lg"
+                className="w-full sm:w-auto"
                 onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 View Case Studies <ChevronRight className="ml-1 h-5 w-5" />
               </Button>
             </div>
+            
+            <div className="flex items-center justify-center lg:justify-start space-x-8 pt-4">
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4].map((i) => (
+                  <div key={i} className="w-10 h-10 rounded-full border-2 border-black overflow-hidden">
+                    <img 
+                      src={`https://randomuser.me/api/portraits/${i % 2 === 0 ? 'women' : 'men'}/${i + 20}.jpg`}
+                      alt="Client"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center">
+                <div className="flex items-center">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-4 h-4 text-pinkish-red fill-pinkish-red" />
+                  ))}
+                </div>
+                <span className="ml-2 text-sm text-gray-300">
+                  <span className="font-bold">4.9/5</span> from 200+ reviews
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Hero image */}
           <div 
-            className="relative mx-auto max-w-lg lg:max-w-none animate-fade-in"
+            className="relative mx-auto max-w-lg lg:max-w-none"
             ref={heroRef}
           >
             <div className="relative">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur opacity-25"></div>
-              <div className="relative glass-card p-1 rounded-2xl overflow-hidden bg-white/90">
+              <div className="absolute -inset-1 bg-gradient-to-r from-pinkish-red/50 to-pinkish-red-light/50 rounded-2xl blur opacity-20"></div>
+              <div className="relative glass-card p-1 rounded-2xl overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1470&q=80" 
                   alt="AI-Driven Solutions" 
                   className="w-full h-auto rounded-xl"
                 />
                 
-                {/* Stats overlay */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-lg p-4 shadow-lg">
+                {/* Stats cards */}
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] bg-black/80 backdrop-blur-xl rounded-xl p-4 border border-pinkish-red/30">
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center">
-                      <p className="text-gray-500 text-xs">Client Growth</p>
-                      <p className="text-gray-900 font-bold text-xl">+147%</p>
+                      <p className="text-gray-400 text-xs">Growth</p>
+                      <p className="text-pinkish-red font-bold text-xl">+147%</p>
                     </div>
-                    <div className="text-center border-x border-gray-200">
-                      <p className="text-gray-500 text-xs">Projects</p>
-                      <p className="text-gray-900 font-bold text-xl">250+</p>
+                    <div className="text-center border-x border-pinkish-red/20">
+                      <p className="text-gray-400 text-xs">Projects</p>
+                      <p className="text-white font-bold text-xl">250+</p>
                     </div>
                     <div className="text-center">
-                      <p className="text-gray-500 text-xs">Client Retention</p>
-                      <p className="text-gray-900 font-bold text-xl">98%</p>
+                      <p className="text-gray-400 text-xs">Retention</p>
+                      <p className="text-pinkish-red font-bold text-xl">98%</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Feature cards */}
+                <div className="absolute top-5 -right-12 bg-black/80 backdrop-blur-xl rounded-xl p-3 border border-pinkish-red/30 shadow-xl">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-pinkish-red/20 flex items-center justify-center mr-3">
+                      <Sparkles className="w-5 h-5 text-pinkish-red" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium text-sm">AI Powered</p>
+                      <p className="text-gray-400 text-xs">Next-gen solutions</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="absolute top-32 -left-12 bg-black/80 backdrop-blur-xl rounded-xl p-3 border border-pinkish-red/30 shadow-xl">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-pinkish-red/20 flex items-center justify-center mr-3">
+                      <Star className="w-5 h-5 text-pinkish-red" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium text-sm">Premium Quality</p>
+                      <p className="text-gray-400 text-xs">Industry leading</p>
                     </div>
                   </div>
                 </div>

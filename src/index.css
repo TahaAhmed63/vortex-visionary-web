@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
@@ -36,15 +36,6 @@
     --ring: 345 100% 60%;
 
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 5%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 345 100% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 0 0% 10%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 345 100% 60%;
   }
 }
 
@@ -56,6 +47,7 @@
   body {
     @apply bg-black text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Poppins', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -69,7 +61,7 @@
   }
   
   .glass-card {
-    @apply bg-black/40 backdrop-blur-md border border-pinkish-red/20 rounded-2xl shadow-lg;
+    @apply bg-black/60 backdrop-blur-md border border-pinkish-red/20 rounded-2xl shadow-lg;
   }
   
   .button-primary {
@@ -92,17 +84,42 @@
   }
 
   .feature-card {
-    @apply relative overflow-hidden bg-black/30 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 
-    border border-pinkish-red/10 hover:border-pinkish-red/30;
+    @apply relative overflow-hidden bg-black/60 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 
+    border border-pinkish-red/30 hover:border-pinkish-red/50 hover:bg-black/70;
+  }
+  
+  .modern-input {
+    @apply w-full px-4 py-3 text-white bg-black/70 border border-pinkish-red/30 rounded-lg 
+    focus:outline-none focus:ring-2 focus:ring-pinkish-red focus:border-transparent transition-all 
+    placeholder:text-gray-500;
+  }
+  
+  .modern-button {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white 
+    bg-gradient-to-r from-pinkish-red to-pinkish-red-light rounded-lg shadow-md hover:shadow-lg 
+    transition-all duration-300 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-pinkish-red/50;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-3;
+  }
+  
+  .section-subtitle {
+    @apply text-lg text-gray-300 mb-12 max-w-2xl mx-auto;
+  }
+  
+  .modern-card {
+    @apply bg-black/60 backdrop-blur-md border border-pinkish-red/20 rounded-2xl shadow-lg
+    hover:border-pinkish-red/40 transition-all duration-300 overflow-hidden;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pinkish-red to-pinkish-red-light;
   }
 }
 
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-pinkish-red to-pinkish-red-light;
-}
-
-.gold-text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-pure-white to-light-gray;
 }
 
 /* Animations */
@@ -128,16 +145,17 @@ html {
 
 /* Improved form styles */
 input, textarea, select {
-  @apply transition-all duration-200;
+  @apply bg-black/70 border border-pinkish-red/30 text-white transition-all duration-200 
+  focus:border-pinkish-red focus:ring-1 focus:ring-pinkish-red;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-jet-black;
+  @apply bg-black;
 }
 
 ::-webkit-scrollbar-thumb {
