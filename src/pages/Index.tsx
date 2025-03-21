@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import BlogSection from "@/components/sections/BlogSection";
 import ContactSection from "@/components/sections/ContactSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import PackagesSection from "@/components/sections/PackagesSection";
 
 const Index = () => {
   useEffect(() => {
@@ -69,9 +70,10 @@ const Index = () => {
         <HeroSection />
         <ServicesSection />
         <ProjectsSection />
-        <QuoteFormSection />
+        <PackagesSection />
         <CaseStudiesSection />
         <TestimonialsSection />
+        <QuoteFormSection />
         <BlogSection />
         <ContactSection />
       </main>

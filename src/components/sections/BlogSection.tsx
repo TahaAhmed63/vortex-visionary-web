@@ -46,23 +46,29 @@ const BlogSection = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-white">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="blog" className="py-20 bg-black relative">
+      {/* Background decorations */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
+      </div>
+
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-12">
           <div className="mb-6 md:mb-0">
-            <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full">
-              Blog & Insights
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+            <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
+              <span className="text-sm font-medium text-pinkish-red">Blog & Insights</span>
+            </div>
+            <h2 className="section-title text-gradient">
               Latest from Our Blog
             </h2>
-            <p className="mt-4 text-xl text-gray-600 max-w-2xl">
+            <p className="section-subtitle max-w-2xl">
               Expert insights, industry trends, and thought leadership on all things tech and digital marketing
             </p>
           </div>
           <Button
             variant="outline"
-            className="self-start md:self-end border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            className="self-start md:self-end"
           >
             View All Articles <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
@@ -70,7 +76,7 @@ const BlogSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <div key={post.id} className="group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white border border-gray-100">
+            <div key={post.id} className="group glass-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-pinkish-red/20">
               <div className="relative overflow-hidden">
                 <img 
                   src={post.image} 
@@ -78,31 +84,31 @@ const BlogSection = () => {
                   className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <Badge className="bg-blue-600 hover:bg-blue-700 text-white font-medium">
+                  <Badge className="bg-pinkish-red hover:bg-pinkish-red/90 text-white font-medium">
                     {post.category}
                   </Badge>
                 </div>
               </div>
               <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
+                <div className="flex items-center text-sm text-gray-400 mb-3">
                   <div className="flex items-center mr-4">
-                    <Calendar className="h-4 w-4 mr-1" />
+                    <Calendar className="h-4 w-4 mr-1 text-pinkish-red" />
                     {post.date}
                   </div>
                   <div className="flex items-center">
-                    <Clock className="h-4 w-4 mr-1" />
+                    <Clock className="h-4 w-4 mr-1 text-pinkish-red" />
                     {post.readTime}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pinkish-red transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-300 mb-4">
                   {post.excerpt}
                 </p>
                 <a 
                   href="#" 
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
+                  className="inline-flex items-center text-pinkish-red font-medium hover:text-pinkish-red-light transition-colors"
                 >
                   Read More <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>

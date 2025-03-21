@@ -1,339 +1,160 @@
-
-import React, { useState } from 'react';
+import React from 'react';
+import { Send, MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Calendar, Clock, Mail, Phone, MapPin, Send, Calendar as CalendarIcon } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const ContactSection = () => {
-  const [appointmentStatus, setAppointmentStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
-  const [contactStatus, setContactStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
-
-  const handleAppointmentSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setAppointmentStatus('submitting');
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setAppointmentStatus('success');
-      // Reset form after success
-      setTimeout(() => setAppointmentStatus('idle'), 3000);
-    }, 1500);
-  };
-
-  const handleContactSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setContactStatus('submitting');
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setContactStatus('success');
-      // Reset form after success
-      setTimeout(() => setContactStatus('idle'), 3000);
-    }, 1500);
-  };
-
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-gray-50 to-gray-100">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full">
-            Get in Touch
-          </span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
-            Ready to Transform Your Business?
+    <section id="contact" className="py-20 bg-black relative">
+      {/* Background decorations */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
+      </div>
+
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
+            <span className="text-sm font-medium text-pinkish-red">Get in Touch</span>
+          </div>
+          <h2 className="section-title text-gradient">
+            Contact Us
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
-            Contact us today to discuss your project or schedule a consultation with our experts
+          <p className="section-subtitle max-w-2xl mx-auto">
+            Have a question or ready to start your next project? Reach out to us today
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
-          <div className="grid grid-cols-1 lg:grid-cols-5">
-            {/* Contact Info */}
-            <div className="p-8 lg:p-12 bg-gradient-to-br from-blue-600 to-indigo-700 text-white lg:col-span-2">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              <p className="mb-8 opacity-90">
-                Reach out to us directly or fill out the form and we'll get back to you promptly.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-md bg-blue-500 bg-opacity-30">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <p className="opacity-75 text-sm">Phone</p>
-                    <p className="mt-1 font-medium">+1 (555) 123-4567</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {/* Contact Information */}
+          <div className="glass-card rounded-2xl p-8 border border-pinkish-red/20 h-fit">
+            <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-pinkish-red/10 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-pinkish-red" />
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-md bg-blue-500 bg-opacity-30">
-                      <Mail className="w-5 h-5" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <p className="opacity-75 text-sm">Email</p>
-                    <p className="mt-1 font-medium">info@vortexsolution.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-md bg-blue-500 bg-opacity-30">
-                      <MapPin className="w-5 h-5" />
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <p className="opacity-75 text-sm">Office</p>
-                    <p className="mt-1 font-medium">123 Innovation Ave, Tech City, TC 10010</p>
-                  </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-white">Our Location</h4>
+                  <p className="text-gray-300 mt-1">123 Tech Avenue, Suite 400<br />San Francisco, CA 94107</p>
                 </div>
               </div>
               
-              <div className="mt-12">
-                <h4 className="text-lg font-semibold mb-4">Business Hours</h4>
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <p className="opacity-75 text-sm">Monday-Friday</p>
-                    <p className="mt-1 font-medium">9:00 AM - 6:00 PM</p>
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-pinkish-red/10 flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-pinkish-red" />
                   </div>
-                  <div>
-                    <p className="opacity-75 text-sm">Saturday</p>
-                    <p className="mt-1 font-medium">10:00 AM - 4:00 PM</p>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-white">Call Us</h4>
+                  <p className="text-gray-300 mt-1">+1 (415) 555-1234</p>
+                  <p className="text-gray-300">+1 (800) 555-5678 (Toll-free)</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-pinkish-red/10 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-pinkish-red" />
                   </div>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-white">Email Us</h4>
+                  <p className="text-gray-300 mt-1">info@vortexsolutions.com</p>
+                  <p className="text-gray-300">support@vortexsolutions.com</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mt-1">
+                  <div className="w-10 h-10 rounded-full bg-pinkish-red/10 flex items-center justify-center">
+                    <Clock className="w-5 h-5 text-pinkish-red" />
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-white">Business Hours</h4>
+                  <p className="text-gray-300 mt-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p className="text-gray-300">Saturday - Sunday: Closed</p>
                 </div>
               </div>
             </div>
             
-            {/* Forms */}
-            <div className="p-8 lg:p-12 lg:col-span-3">
-              <Tabs defaultValue="contact" className="w-full">
-                <TabsList className="grid w-full grid-cols-2 mb-8">
-                  <TabsTrigger value="contact">Contact Us</TabsTrigger>
-                  <TabsTrigger value="appointment">Book Appointment</TabsTrigger>
-                </TabsList>
-                
-                {/* Contact Form */}
-                <TabsContent value="contact">
-                  {contactStatus === 'success' ? (
-                    <div className="text-center py-10">
-                      <div className="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-6">
-                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-                      <p className="text-gray-600 mb-6">
-                        Thank you for reaching out. We'll get back to you as soon as possible.
-                      </p>
-                      <Button
-                        onClick={() => setContactStatus('idle')}
-                        variant="outline"
-                        className="text-blue-600 border-blue-600 hover:bg-blue-50"
-                      >
-                        Send Another Message
-                      </Button>
+            <div className="mt-10 pt-8 border-t border-pinkish-red/20">
+              <h4 className="text-lg font-medium text-white mb-4">Connect With Us</h4>
+              <div className="flex space-x-4">
+                {['twitter', 'facebook', 'linkedin', 'instagram'].map((platform) => (
+                  <a 
+                    key={platform}
+                    href="#" 
+                    className="w-10 h-10 rounded-full bg-pinkish-red/10 flex items-center justify-center hover:bg-pinkish-red/30 transition-colors"
+                  >
+                    <span className="sr-only">{platform}</span>
+                    <div className="w-5 h-5 text-pinkish-red">
+                      {/* Placeholder for social icons */}
                     </div>
-                  ) : (
-                    <form onSubmit={handleContactSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <label htmlFor="name" className="text-sm font-medium text-gray-700">Full Name</label>
-                          <Input 
-                            id="name" 
-                            placeholder="John Doe" 
-                            required 
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="email" className="text-sm font-medium text-gray-700">Email</label>
-                          <Input 
-                            id="email" 
-                            type="email" 
-                            placeholder="john@example.com" 
-                            required 
-                          />
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <label htmlFor="subject" className="text-sm font-medium text-gray-700">Subject</label>
-                        <Input 
-                          id="subject" 
-                          placeholder="How can we help you?" 
-                          required 
-                        />
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
-                        <Textarea 
-                          id="message" 
-                          placeholder="Your message here..." 
-                          rows={5} 
-                          required 
-                          className="resize-none"
-                        />
-                      </div>
-                      
-                      <Button 
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium transition-all duration-300"
-                        disabled={contactStatus === 'submitting'}
-                      >
-                        {contactStatus === 'submitting' ? (
-                          <span className="flex items-center">
-                            <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            Sending...
-                          </span>
-                        ) : (
-                          <span className="flex items-center">
-                            Send Message <Send className="ml-2 h-4 w-4" />
-                          </span>
-                        )}
-                      </Button>
-                    </form>
-                  )}
-                </TabsContent>
-                
-                {/* Appointment Form */}
-                <TabsContent value="appointment">
-                  {appointmentStatus === 'success' ? (
-                    <div className="text-center py-10">
-                      <div className="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto mb-6">
-                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">Appointment Booked!</h3>
-                      <p className="text-gray-600 mb-6">
-                        Your appointment has been scheduled. We'll send a confirmation email shortly.
-                      </p>
-                      <Button
-                        onClick={() => setAppointmentStatus('idle')}
-                        variant="outline"
-                        className="text-blue-600 border-blue-600 hover:bg-blue-50"
-                      >
-                        Book Another Appointment
-                      </Button>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleAppointmentSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <label htmlFor="fullName" className="text-sm font-medium text-gray-700">Full Name</label>
-                          <Input 
-                            id="fullName" 
-                            placeholder="John Doe" 
-                            required 
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="appointmentEmail" className="text-sm font-medium text-gray-700">Email</label>
-                          <Input 
-                            id="appointmentEmail" 
-                            type="email" 
-                            placeholder="john@example.com" 
-                            required 
-                          />
-                        </div>
-                      </div>
-                      
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</label>
-                          <Input 
-                            id="phone" 
-                            type="tel" 
-                            placeholder="+1 (555) 000-0000" 
-                            required 
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="service" className="text-sm font-medium text-gray-700">Service Type</label>
-                          <Select>
-                            <SelectTrigger id="service">
-                              <SelectValue placeholder="Select a service" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="consultation">Initial Consultation</SelectItem>
-                              <SelectItem value="project-discussion">Project Discussion</SelectItem>
-                              <SelectItem value="demo">Product Demo</SelectItem>
-                              <SelectItem value="support">Technical Support</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
-                      </div>
-                      
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                          <label htmlFor="date" className="text-sm font-medium text-gray-700">Preferred Date</label>
-                          <div className="relative">
-                            <Input 
-                              id="date" 
-                              type="date" 
-                              required 
-                            />
-                            <CalendarIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none h-5 w-5" />
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="time" className="text-sm font-medium text-gray-700">Preferred Time</label>
-                          <div className="relative">
-                            <Input 
-                              id="time" 
-                              type="time" 
-                              required 
-                            />
-                            <Clock className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none h-5 w-5" />
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <label htmlFor="notes" className="text-sm font-medium text-gray-700">Additional Notes</label>
-                        <Textarea 
-                          id="notes" 
-                          placeholder="Tell us more about what you'd like to discuss..." 
-                          rows={3} 
-                          className="resize-none"
-                        />
-                      </div>
-                      
-                      <Button 
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium transition-all duration-300"
-                        disabled={appointmentStatus === 'submitting'}
-                      >
-                        {appointmentStatus === 'submitting' ? (
-                          <span className="flex items-center">
-                            <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            Processing...
-                          </span>
-                        ) : (
-                          <span className="flex items-center">
-                            Book Appointment <Calendar className="ml-2 h-4 w-4" />
-                          </span>
-                        )}
-                      </Button>
-                    </form>
-                  )}
-                </TabsContent>
-              </Tabs>
+                  </a>
+                ))}
+              </div>
             </div>
+          </div>
+          
+          {/* Contact Form */}
+          <div className="glass-card rounded-2xl p-8 border border-pinkish-red/20">
+            <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-white font-medium mb-2">Your Name</label>
+                  <Input 
+                    id="name" 
+                    type="text" 
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-white font-medium mb-2">Your Email</label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="subject" className="block text-white font-medium mb-2">Subject</label>
+                <Input 
+                  id="subject" 
+                  type="text" 
+                  placeholder="How can we help you?"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-white font-medium mb-2">Message</label>
+                <Textarea 
+                  id="message" 
+                  placeholder="Tell us about your project or inquiry..."
+                  rows={5}
+                  required
+                />
+              </div>
+              
+              <div>
+                <Button type="submit" className="w-full md:w-auto">
+                  Send Message <Send className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

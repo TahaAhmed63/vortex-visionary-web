@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
           <Star
             key={index}
             className={`h-5 w-5 ${
-              index < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'
+              index < rating ? 'text-pinkish-red fill-pinkish-red' : 'text-gray-700'
             }`}
           />
         ))}
@@ -71,16 +71,22 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-20 bg-black relative">
+      {/* Background decorations */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
+      </div>
+
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full">
-            Testimonials
-          </span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
+            <span className="text-sm font-medium text-pinkish-red">Testimonials</span>
+          </div>
+          <h2 className="section-title text-gradient">
             What Our Clients Say
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="section-subtitle">
             Don't just take our word for it — hear from some of our satisfied clients
           </p>
         </div>
@@ -88,11 +94,11 @@ const TestimonialsSection = () => {
         <div className="relative max-w-4xl mx-auto">
           {/* Large Quote Icon */}
           <div className="absolute -top-10 -left-10 opacity-10">
-            <Quote className="h-20 w-20 text-blue-600" />
+            <Quote className="h-20 w-20 text-pinkish-red" />
           </div>
           
           {/* Testimonials Slider */}
-          <div className="overflow-hidden bg-white rounded-2xl shadow-xl relative z-10 border border-gray-100">
+          <div className="overflow-hidden glass-card rounded-2xl shadow-xl relative z-10 border border-pinkish-red/20">
             <div 
               className="flex transition-transform duration-500 ease-out"
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -104,19 +110,19 @@ const TestimonialsSection = () => {
                 >
                   <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
                     <div className="flex-shrink-0">
-                      <Avatar className="h-24 w-24 border-2 border-blue-100">
+                      <Avatar className="h-24 w-24 border-2 border-pinkish-red/30">
                         <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                        <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                        <AvatarFallback className="bg-pinkish-red/10 text-white">{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                       </Avatar>
                     </div>
                     <div className="flex-grow text-center md:text-left">
                       <RatingStars rating={testimonial.rating} />
-                      <blockquote className="mt-4 text-lg text-gray-700 italic leading-relaxed">
+                      <blockquote className="mt-4 text-lg text-white italic leading-relaxed">
                         "{testimonial.content}"
                       </blockquote>
                       <div className="mt-6">
-                        <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                        <p className="text-sm text-gray-600">
+                        <p className="font-semibold text-white">{testimonial.name}</p>
+                        <p className="text-sm text-gray-400">
                           {testimonial.position}, {testimonial.company}
                         </p>
                       </div>
@@ -132,7 +138,7 @@ const TestimonialsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={prevSlide}
-                className="rounded-full h-10 w-10 border-gray-300 text-gray-700 hover:bg-gray-100"
+                className="rounded-full h-10 w-10"
               >
                 <ArrowLeft className="h-5 w-5" />
               </Button>
@@ -140,7 +146,7 @@ const TestimonialsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={nextSlide}
-                className="rounded-full h-10 w-10 border-gray-300 text-gray-700 hover:bg-gray-100"
+                className="rounded-full h-10 w-10"
               >
                 <ArrowRight className="h-5 w-5" />
               </Button>
@@ -154,7 +160,7 @@ const TestimonialsSection = () => {
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all ${
-                  index === activeIndex ? 'bg-blue-600' : 'bg-gray-300'
+                  index === activeIndex ? 'bg-pinkish-red' : 'bg-gray-700'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

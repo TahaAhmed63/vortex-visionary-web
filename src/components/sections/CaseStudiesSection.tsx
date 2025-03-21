@@ -72,16 +72,22 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <section id="case-studies" className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="case-studies" className="py-20 bg-black relative">
+      {/* Background decorations */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
+      </div>
+
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-700 bg-indigo-100 rounded-full">
-            Success Stories
-          </span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
+          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
+            <span className="text-sm font-medium text-pinkish-red">Success Stories</span>
+          </div>
+          <h2 className="section-title text-gradient">
             Our Work Speaks For Itself
           </h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <p className="section-subtitle">
             Explore how we've helped businesses achieve remarkable results with our custom solutions
           </p>
         </div>
@@ -90,7 +96,7 @@ const CaseStudiesSection = () => {
           {/* Case Study Slider */}
           <div 
             ref={sliderRef}
-            className="overflow-hidden rounded-2xl shadow-xl bg-white"
+            className="overflow-hidden rounded-2xl shadow-xl glass-card border border-pinkish-red/20"
           >
             <div 
               className="flex transition-transform duration-500 ease-out"
@@ -107,7 +113,7 @@ const CaseStudiesSection = () => {
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute bottom-4 left-4">
-                        <Badge className="bg-blue-600 hover:bg-blue-700 text-white">
+                        <Badge className="bg-pinkish-red hover:bg-pinkish-red/90 text-white">
                           {study.category}
                         </Badge>
                       </div>
@@ -115,22 +121,22 @@ const CaseStudiesSection = () => {
                     
                     {/* Content Side */}
                     <div className="p-6 lg:p-10 flex flex-col">
-                      <div className="mb-2 text-sm text-gray-500">Client: {study.client}</div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">{study.title}</h3>
-                      <p className="text-gray-600 mb-6 flex-grow">{study.description}</p>
+                      <div className="mb-2 text-sm text-gray-400">Client: {study.client}</div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                      <p className="text-gray-300 mb-6 flex-grow">{study.description}</p>
                       
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         {study.results.map((result, index) => (
-                          <div key={index} className="text-center p-3 bg-gray-50 rounded-lg">
-                            <p className="text-gray-500 text-xs">{result.label}</p>
-                            <p className="text-blue-600 font-bold text-xl">{result.value}</p>
+                          <div key={index} className="text-center p-3 bg-black/70 rounded-lg border border-pinkish-red/20">
+                            <p className="text-gray-400 text-xs">{result.label}</p>
+                            <p className="text-pinkish-red font-bold text-xl">{result.value}</p>
                           </div>
                         ))}
                       </div>
                       
                       <Button
                         variant="outline"
-                        className="self-start border-gray-300 text-gray-700 hover:bg-gray-100 hover:text-gray-900 inline-flex items-center"
+                        className="self-start"
                       >
                         View Full Case Study <ExternalLink className="ml-2 h-4 w-4" />
                       </Button>
@@ -149,7 +155,7 @@ const CaseStudiesSection = () => {
                   key={index}
                   onClick={() => setActiveSlide(index)}
                   className={`w-10 h-1.5 rounded-full transition-all ${
-                    index === activeSlide ? 'bg-blue-600' : 'bg-gray-300'
+                    index === activeSlide ? 'bg-pinkish-red' : 'bg-gray-700'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -161,7 +167,7 @@ const CaseStudiesSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={prevSlide}
-                className="rounded-full h-10 w-10 border-gray-300 text-gray-700 hover:bg-gray-100"
+                className="rounded-full h-10 w-10"
               >
                 <ArrowLeft className="h-5 w-5" />
               </Button>
@@ -169,7 +175,7 @@ const CaseStudiesSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={nextSlide}
-                className="rounded-full h-10 w-10 border-gray-300 text-gray-700 hover:bg-gray-100"
+                className="rounded-full h-10 w-10"
               >
                 <ArrowRight className="h-5 w-5" />
               </Button>
