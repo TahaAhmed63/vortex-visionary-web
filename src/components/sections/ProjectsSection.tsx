@@ -1,6 +1,5 @@
-
 import React, { useRef, useEffect, useState } from 'react';
-import { Code, ExternalLink, GitHub, Tv } from 'lucide-react';
+import { Code, ExternalLink, Github, Tv } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -203,7 +202,7 @@ const ProjectsSection = () => {
                     asChild
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <GitHub className="mr-2 h-4 w-4" />
+                      <Github className="mr-2 h-4 w-4" />
                       Code
                     </a>
                   </Button>
