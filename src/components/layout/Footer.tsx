@@ -9,12 +9,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-dark text-white pt-16 pb-8">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-display font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-400">
+            <h3 className="text-xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-electric-blue to-neon-purple">
               Vortex Solution
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
