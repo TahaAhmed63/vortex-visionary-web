@@ -35,12 +35,10 @@ const Header = () => {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/c265baf8-202a-4e9b-b2d1-37e882956787.png" 
-              alt="Vortex Solution Logo" 
-              className="h-10 md:h-12"
-            />
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="text-xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-electric-blue to-neon-purple">
+              Vortex Solution
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
