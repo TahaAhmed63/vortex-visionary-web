@@ -14,9 +14,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold font-display bg-clip-text text-transparent bg-gradient-to-r from-electric-blue to-neon-purple">
-              Vortex Solution
-            </h3>
+            <Link to="/" className="inline-block mb-2">
+              <img 
+                src="/lovable-uploads/c265baf8-202a-4e9b-b2d1-37e882956787.png" 
+                alt="Vortex Solution Logo" 
+                className="h-10"
+              />
+            </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering businesses with cutting-edge AI-driven solutions, innovative digital marketing strategies, and world-class development services.
             </p>
