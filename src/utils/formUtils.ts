@@ -15,6 +15,9 @@ export const submitFormToAPI = async ({
   onError
 }: FormSubmitOptions) => {
   try {
+    // Log the request to help with debugging
+    console.log('Submitting form data:', { formType, data });
+
     const response = await fetch('/api/send-email', {
       method: 'POST',
       headers: {
@@ -26,7 +29,9 @@ export const submitFormToAPI = async ({
       }),
     });
 
+    console.log('API Response status:', response.status);
     const result = await response.json();
+    console.log('API Response data:', result);
 
     if (!response.ok) {
       throw new Error(result.error || 'Something went wrong');
