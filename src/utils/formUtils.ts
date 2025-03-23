@@ -18,7 +18,7 @@ export const submitFormToAPI = async ({
     // Log the request to help with debugging
     console.log('Submitting form data:', { formType, data });
 
-    const response = await fetch('/api/send-email', {
+    const response = await fetch('/api/send-email.js', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
