@@ -5,20 +5,57 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Sparkles, Lightbulb, Rocket, Send, CheckCircle } from 'lucide-react';
+import { submitFormToAPI } from '@/utils/formUtils';
+import { Toaster } from '@/components/ui/toaster';
 
 const QuoteFormSection = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleServiceChange = (value: string) => {
+    setFormData(prev => ({ ...prev, service: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormStatus('submitting');
     
-    // Simulate form submission
-    setTimeout(() => {
-      setFormStatus('success');
-      // Reset form after 3 seconds
-      setTimeout(() => setFormStatus('idle'), 3000);
-    }, 1500);
+    const success = await submitFormToAPI({
+      formType: 'quote',
+      data: {
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message
+      },
+      onSuccess: () => {
+        setFormStatus('success');
+        // Reset form after 5 seconds
+        setTimeout(() => setFormStatus('idle'), 5000);
+      },
+      onError: () => {
+        setFormStatus('error');
+        // Return to idle state after 3 seconds
+        setTimeout(() => setFormStatus('idle'), 3000);
+      }
+    });
+
+    if (!success) {
+      setFormStatus('error');
+    }
   };
 
   return (
@@ -93,7 +130,17 @@ const QuoteFormSection = () => {
                   Your request has been submitted successfully. Our team will contact you shortly.
                 </p>
                 <Button
-                  onClick={() => setFormStatus('idle')}
+                  onClick={() => {
+                    setFormStatus('idle');
+                    setFormData({
+                      firstName: '',
+                      lastName: '',
+                      email: '',
+                      phone: '',
+                      service: '',
+                      message: '',
+                    });
+                  }}
                   variant="outline"
                 >
                   Submit Another Request
@@ -111,6 +158,8 @@ const QuoteFormSection = () => {
                       placeholder="John" 
                       required 
                       className="w-full"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
                     />
                   </div>
                   <div className="space-y-2">
@@ -120,6 +169,8 @@ const QuoteFormSection = () => {
                       placeholder="Doe" 
                       required 
                       className="w-full"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
                     />
                   </div>
                 </div>
@@ -132,6 +183,8 @@ const QuoteFormSection = () => {
                     placeholder="john@example.com" 
                     required 
                     className="w-full"
+                    value={formData.email}
+                    onChange={handleInputChange}
                   />
                 </div>
                 
@@ -140,14 +193,16 @@ const QuoteFormSection = () => {
                   <Input 
                     id="phone" 
                     type="tel" 
-                    placeholder="+1 (555) 000-0000" 
+                    placeholder="+1 (555) 000-0000"
                     className="w-full"
+                    value={formData.phone}
+                    onChange={handleInputChange}
                   />
                 </div>
                 
                 <div className="space-y-2">
                   <label htmlFor="service" className="text-sm font-medium text-gray-300">Service Interested In</label>
-                  <Select>
+                  <Select onValueChange={handleServiceChange} value={formData.service}>
                     <SelectTrigger className="w-full bg-black/70 border-pinkish-red/30 text-white">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
@@ -169,6 +224,8 @@ const QuoteFormSection = () => {
                     placeholder="Tell us about your project requirements..." 
                     rows={4} 
                     className="w-full resize-none"
+                    value={formData.message}
+                    onChange={handleInputChange}
                   />
                 </div>
                 
@@ -199,6 +256,7 @@ const QuoteFormSection = () => {
           </div>
         </div>
       </div>
+      <Toaster />
     </section>
   );
 };
