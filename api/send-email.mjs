@@ -1,4 +1,3 @@
-
 import nodemailer from 'nodemailer';
 
 // Create a transporter object
@@ -10,7 +9,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   // Enable CORS
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
