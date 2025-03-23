@@ -23,6 +23,8 @@
     }
   ],
   "env": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "EMAIL_USER": "ataha6381@gmail.com",
+    "EMAIL_PASS": "nlio jyhq piii tklg"
   }
 }

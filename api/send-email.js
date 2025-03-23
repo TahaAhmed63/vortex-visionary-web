@@ -38,6 +38,7 @@ module.exports = async (req, res) => {
     console.log('Attempting to send email with the following data:', { 
       name, email, subject, message, formType 
     });
+    console.log('Using email account:', process.env.EMAIL_USER);
     
     // Set up email data depending on form type
     const mailOptions = {
@@ -63,6 +64,7 @@ module.exports = async (req, res) => {
     return res.status(200).json({ success: true });
   } catch (error) {
     console.error('Error sending email:', error);
+    console.error('Error details:', error.message);
     return res.status(500).json({ error: 'Failed to send email', details: error.message });
   }
 };
