@@ -21,10 +21,6 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "EMAIL_USER": "ataha6381@gmail.com",
-    "EMAIL_PASS": "nlio jyhq piii tklg"
-  }
+  ]
+ 
 }
