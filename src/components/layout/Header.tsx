@@ -35,11 +35,11 @@ const Header = () => {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/c265baf8-202a-4e9b-b2d1-37e882956787.png" 
+          <Link to="/" className="flex items-center space-x-2">
+          <img 
+              src="/lovable-uploads/03_23_2025_X-Design (3) (1).png" 
               alt="Vortex Solution Logo" 
-              className="h-10 md:h-12"
+              className="h-[60px] "
             />
           </Link>
 
@@ -59,7 +59,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              className="bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-neon-purple/30"
+              className="bg-gradient-to-r  from-electric-blue to-neon-purple hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-neon-purple/30"
               onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get a Quote

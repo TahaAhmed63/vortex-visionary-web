@@ -84,7 +84,7 @@ const ProjectsSection = () => {
     : activeFilter === 'featured' 
       ? projects.filter(project => project.featured) 
       : projects.filter(project => project.technologies.includes(activeFilter));
-
+console.log(filteredProjects,"filteredProjects")
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -167,9 +167,10 @@ const ProjectsSection = () => {
           {filteredProjects.map((project) => (
             <Card 
               key={project.id} 
-              className="bg-black/30 border border-white/10 hover:border-electric-blue/50 transition-all duration-300 hover:shadow-md overflow-hidden section-fade-in"
+              className="bg-black/30 border border-white/10 hover:border-electric-blue/50 transition-all duration-300 hover:shadow-md overflow-hidden "
             >
               <div className="relative h-48 overflow-hidden">
+              
                 <img 
                   src={project.image} 
                   alt={project.title} 
