@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
@@ -103,8 +102,9 @@ const WebsiteMaintenance = () => {
 
   return (
     <ServicePageLayout
-      title="Website Maintenance"
-      description="Ensure your website remains secure, up-to-date, and performing optimally with our comprehensive maintenance plans."
+      title="Website Maintenance Services"
+      description="Keep your website secure, up-to-date, and performing at its best with our maintenance packages."
+      heroImage="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
       <section className="py-20 bg-black relative">
@@ -129,8 +129,64 @@ const WebsiteMaintenance = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+                image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1486312338219-ce68d2c6f44d' : '1531482615713-2afd69097998'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section with image */}
+      <section className="py-20 bg-black relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              Why Choose Our Maintenance Services
+            </h2>
+            <p className="text-lg text-gray-300">
+              Proactive support to keep your website running smoothly
+            </p>
+          </div>
+
+          <div className="glass-card p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">Proactive Maintenance Approach</h3>
+                <p className="text-gray-300 mb-6">
+                  We don't just fix issues when they occur - we prevent them from happening in the first place.
+                </p>
+                <div className="space-y-5 mb-6">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-pinkish-red/20 flex items-center justify-center text-pinkish-red">✓</div>
+                    <div>
+                      <h4 className="text-white font-medium">Regular Security Updates</h4>
+                      <p className="text-gray-300 text-sm">Keeping your website protected against the latest threats.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-pinkish-red/20 flex items-center justify-center text-pinkish-red">✓</div>
+                    <div>
+                      <h4 className="text-white font-medium">Scheduled Backups</h4>
+                      <p className="text-gray-300 text-sm">Regular data backups to ensure nothing is ever lost.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 mt-1 mr-3 w-6 h-6 rounded-full bg-pinkish-red/20 flex items-center justify-center text-pinkish-red">✓</div>
+                    <div>
+                      <h4 className="text-white font-medium">Performance Monitoring</h4>
+                      <p className="text-gray-300 text-sm">Continuous monitoring for optimal loading speeds and uptime.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                  alt="Website maintenance monitoring" 
+                  className="rounded-lg w-full shadow-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

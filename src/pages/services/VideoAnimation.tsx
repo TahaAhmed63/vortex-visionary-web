@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import ServiceFeature from '@/components/services/ServiceFeature';
@@ -109,7 +108,8 @@ const VideoAnimation = () => {
   return (
     <ServicePageLayout
       title="Video Animation Services"
-      description="Engage your audience with professional explainer videos and animations that communicate your message effectively."
+      description="Engage your audience with professional explainer videos and animations."
+      heroImage="https://images.unsplash.com/photo-1574717024453-354a08aab7c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
       <section className="py-20 bg-black relative">
@@ -134,6 +134,7 @@ const VideoAnimation = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+                image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1551244072-237a26d3e658' : '1580136895875-4227dfd03166'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
               />
             ))}
           </div>
@@ -229,6 +230,60 @@ const VideoAnimation = () => {
                 <p className="text-gray-300 pl-14">{step.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-20 bg-black relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              Animation Portfolio
+            </h2>
+            <p className="text-lg text-gray-300">
+              Examples of our video animation work
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="glass-card overflow-hidden">
+              <div className="relative aspect-video">
+                <img 
+                  src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                  alt="Product Explainer Animation" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-xl font-medium">Product Explainer</span>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-semibold text-white mb-2">Product Explainer Animation</h3>
+                <p className="text-gray-300">
+                  An engaging animation that clearly demonstrates product features and benefits.
+                </p>
+              </div>
+            </div>
+            
+            <div className="glass-card overflow-hidden">
+              <div className="relative aspect-video">
+                <img 
+                  src="https://images.unsplash.com/photo-1574717024453-354a08aab7c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                  alt="Corporate Brand Story" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-xl font-medium">Brand Story</span>
+                </div>
+              </div>
+              <div className="p-5">
+                <h3 className="text-xl font-semibold text-white mb-2">Corporate Brand Story</h3>
+                <p className="text-gray-300">
+                  A compelling narrative animation that communicates company values and mission.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

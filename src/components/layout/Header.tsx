@@ -16,6 +16,7 @@ import { cn } from "@/lib/utils";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [serviceSubmenuOpen, setServiceSubmenuOpen] = useState(false);
 
   // Navigation items
   const navItems = [
@@ -69,6 +70,10 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleServiceSubmenu = () => {
+    setServiceSubmenuOpen(!serviceSubmenuOpen);
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -79,10 +84,10 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-          <img 
+            <img 
               src="/lovable-uploads/03_23_2025_X-Design (3) (1).png" 
               alt="Vortex Solution Logo" 
-              className="h-[60px] "
+              className="h-[60px]"
             />
           </Link>
 
@@ -92,14 +97,14 @@ const Header = () => {
               <NavigationMenuList>
                 {navItems.map((item) => 
                   item.hasSubmenu ? (
-                    <NavigationMenuItem key={item.name}>
+                    <NavigationMenuItem key={item.name} className="relative">
                       <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200 bg-transparent">
                         {item.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="bg-midnight-blue/95 backdrop-blur-md border-gray-800">
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                           {serviceItems.map((service) => (
-                            <li key={service.name}>
+                            <li key={service.name} className="col-span-1">
                               <NavigationMenuLink asChild>
                                 <Link
                                   to={service.href}
@@ -152,30 +157,38 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        {/* Mobile Navigation Menu - Improved responsive design */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-midnight-blue/95 shadow-lg animate-fade-in">
+          <div className="md:hidden fixed top-[calc(100%)] left-0 right-0 max-h-[80vh] overflow-y-auto bg-midnight-blue/95 shadow-lg animate-fade-in z-50">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
                 <React.Fragment key={item.name}>
                   {item.hasSubmenu ? (
                     <div>
-                      <div className="px-3 py-2 text-base font-medium text-white flex items-center justify-between">
+                      <button 
+                        className="w-full px-3 py-2 text-base font-medium text-white flex items-center justify-between rounded-md hover:bg-white/10 hover:text-electric-blue"
+                        onClick={toggleServiceSubmenu}
+                      >
                         <span>{item.name}</span>
-                        <ChevronDown className="h-4 w-4 ml-1" />
-                      </div>
-                      <div className="pl-4">
-                        {serviceItems.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.href}
-                            className="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-electric-blue"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
+                        <ChevronDown className={`h-4 w-4 ml-1 transition-transform ${serviceSubmenuOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {serviceSubmenuOpen && (
+                        <div className="pl-4 mt-1 space-y-1 bg-midnight-blue/30 rounded-md">
+                          {serviceItems.map((service) => (
+                            <Link
+                              key={service.name}
+                              to={service.href}
+                              className="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-electric-blue"
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setServiceSubmenuOpen(false);
+                              }}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <a

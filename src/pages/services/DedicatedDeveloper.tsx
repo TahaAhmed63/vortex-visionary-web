@@ -1,9 +1,9 @@
-
 import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
-import { Card, CardContent } from "@/components/ui/card";
-import { Code, Terminal, Server, Database, Globe, Smartphone } from 'lucide-react';
+import ServiceFeature from '@/components/services/ServiceFeature';
+import Testimonial from '@/components/services/Testimonial';
+import { UserPlus, Code, Lightbulb, Clock, MessageSquare, CheckCircle } from 'lucide-react';
 
 const DedicatedDeveloper = () => {
   useEffect(() => {
@@ -38,75 +38,86 @@ const DedicatedDeveloper = () => {
     handleIntersection();
   }, []);
 
-  const juniorFeatures: PricingFeature[] = [
-    { text: "Frontend development", included: true },
-    { text: "Basic backend development", included: true },
-    { text: "Bug fixing", included: true },
-    { text: "Basic feature implementation", included: true },
-    { text: "Daily progress reports", included: true },
-    { text: "Architecture design", included: false },
-    { text: "Complex system development", included: false }
-  ];
-
-  const midLevelFeatures: PricingFeature[] = [
-    { text: "Frontend development", included: true },
-    { text: "Backend development", included: true },
-    { text: "Bug fixing", included: true },
-    { text: "Advanced feature implementation", included: true },
-    { text: "Daily progress reports", included: true },
-    { text: "Basic architecture design", included: true },
-    { text: "Complex system development", included: false }
-  ];
-
-  const seniorFeatures: PricingFeature[] = [
-    { text: "Frontend development", included: true },
-    { text: "Backend development", included: true },
-    { text: "Bug fixing", included: true },
-    { text: "Advanced feature implementation", included: true },
-    { text: "Daily progress reports", included: true },
-    { text: "Architecture design", included: true },
-    { text: "Complex system development", included: true }
-  ];
-
-  const technologies = [
+  const features = [
     {
-      category: "Frontend Development",
-      icon: <Globe className="w-6 h-6 text-pinkish-red" />,
-      skills: ["React", "Vue.js", "Angular", "Next.js", "HTML5/CSS3", "JavaScript/TypeScript", "Tailwind CSS", "Bootstrap"]
+      icon: <UserPlus className="w-7 h-7" />,
+      title: "Access to Top Talent",
+      description: "Hire pre-vetted developers with expertise in various technologies.",
     },
     {
-      category: "Backend Development",
-      icon: <Server className="w-6 h-6 text-pinkish-red" />,
-      skills: ["Node.js", "Express.js", "Django", "Laravel", "Ruby on Rails", "Spring Boot", "ASP.NET Core"]
+      icon: <Code className="w-7 h-7" />,
+      title: "Custom Skill Matching",
+      description: "Developers matched to your specific project requirements and tech stack.",
     },
     {
-      category: "Database",
-      icon: <Database className="w-6 h-6 text-pinkish-red" />,
-      skills: ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "Oracle", "Firebase", "Redis"]
+      icon: <Lightbulb className="w-7 h-7" />,
+      title: "Flexible Engagement",
+      description: "Scale your team up or down as needed with flexible contract options.",
     },
     {
-      category: "Mobile Development",
-      icon: <Smartphone className="w-6 h-6 text-pinkish-red" />,
-      skills: ["React Native", "Flutter", "Swift", "Kotlin", "Xamarin", "Ionic"]
+      icon: <Clock className="w-7 h-7" />,
+      title: "Time Zone Alignment",
+      description: "Developers available in time zones that align with your team's working hours.",
     },
     {
-      category: "DevOps",
-      icon: <Terminal className="w-6 h-6 text-pinkish-red" />,
-      skills: ["Docker", "Kubernetes", "AWS", "Azure", "Google Cloud", "CI/CD", "GitHub Actions"]
+      icon: <MessageSquare className="w-7 h-7" />,
+      title: "Direct Communication",
+      description: "Seamless communication with your dedicated developer for efficient collaboration.",
     },
     {
-      category: "Other",
-      icon: <Code className="w-6 h-6 text-pinkish-red" />,
-      skills: ["GraphQL", "REST API", "WebSockets", "Microservices", "Serverless", "AI/ML Integration"]
+      icon: <CheckCircle className="w-7 h-7" />,
+      title: "Quality Assurance",
+      description: "Rigorous testing and quality assurance processes to ensure high-quality code.",
     }
+  ];
+
+  const testimonials = [
+    {
+      quote: "Having a dedicated developer from this service has been a game-changer for our project. Their expertise and commitment have significantly accelerated our development timeline.",
+      author: "Alex Johnson",
+      company: "Innovatech Solutions",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936e63?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      quote: "The dedicated developer we hired quickly integrated into our team and has been instrumental in delivering high-quality code. Their proactive approach and problem-solving skills are invaluable.",
+      author: "Sarah Williams",
+      company: "WebDev Dynamics",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1532980400857-c99fe3968aca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    }
+  ];
+
+  const basicFeatures: PricingFeature[] = [
+    { text: "40 hours per week", included: true },
+    { text: "Daily progress reports", included: true },
+    { text: "Code review", included: true },
+    { text: "Bug fixing", included: true },
+    { text: "Basic project management", included: true },
+    { text: "Access to standard tech stack", included: true },
+    { text: "Direct communication via email", included: true },
+    { text: "Priority support", included: false },
+    { text: "Access to premium tech stack", included: false },
+    { text: "Dedicated project manager", included: false }
+  ];
+
+  const premiumFeatures: PricingFeature[] = [
+    { text: "All features in the Basic Package", included: true },
+    { text: "Priority support", included: true },
+    { text: "Access to premium tech stack", included: true },
+    { text: "Dedicated project manager", included: true },
+    { text: "Flexible working hours", included: true },
+    { text: "Advanced code optimization", included: true },
+    { text: "Direct communication via Slack/Teams", included: true }
   ];
 
   return (
     <ServicePageLayout
       title="Dedicated Developer Services"
-      description="Access skilled developers to bring your projects to life, whether you need a single developer or an entire team."
+      description="Access skilled developers tailored to your project requirements."
+      heroImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
-      {/* Benefits Section */}
+      {/* Features Section */}
       <section className="py-20 bg-black relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
@@ -115,193 +126,205 @@ const DedicatedDeveloper = () => {
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 section-fade-in">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Benefits of Hiring Dedicated Developers
+              Why Hire a Dedicated Developer?
             </h2>
             <p className="text-lg text-gray-300">
-              Unlock the advantages of working with our skilled development team
+              Get access to top talent focused solely on your projects
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Cost Efficiency",
-                description: "Save on recruitment, training, and infrastructure costs compared to hiring in-house developers."
-              },
-              {
-                title: "Flexibility",
-                description: "Scale your team up or down based on project requirements and development phases."
-              },
-              {
-                title: "Access to Expertise",
-                description: "Work with specialists in various technologies without the challenge of finding rare skills locally."
-              },
-              {
-                title: "Faster Development",
-                description: "Accelerate your project timeline with experienced developers who can hit the ground running."
-              },
-              {
-                title: "Focus on Core Business",
-                description: "Concentrate on your business strategy while we handle the technical implementation."
-              },
-              {
-                title: "Quality Assurance",
-                description: "Benefit from our rigorous quality standards and testing procedures for reliable software."
-              }
-            ].map((benefit, index) => (
-              <Card key={index} className="h-full">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </CardContent>
-              </Card>
+            {features.map((feature, index) => (
+              <ServiceFeature
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+                image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1573497491765-dccce02b3982' : '1522252234503-e356532cafd5'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
+            />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Testimonials Section */}
       <section className="py-20 bg-black/90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Our Technical Expertise
+              What Our Clients Say
             </h2>
             <p className="text-lg text-gray-300">
-              Our developers are proficient in a wide range of technologies
+              Hear from businesses that have transformed their development process
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="glass-card p-6">
-                <div className="flex items-center mb-4">
-                  <div className="mr-3">{tech.icon}</div>
-                  <h3 className="text-xl font-semibold text-white">{tech.category}</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {tech.skills.map((skill, idx) => (
-                    <span 
-                      key={idx} 
-                      className="px-3 py-1 bg-black/70 border border-pinkish-red/30 rounded-full text-sm text-gray-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Testimonial
+                key={index}
+                quote={testimonial.quote}
+                author={testimonial.author}
+                company={testimonial.company}
+                rating={testimonial.rating}
+                image={testimonial.image}
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-black relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Developer Rates
-            </h2>
-            <p className="text-lg text-gray-300">
-              Transparent pricing based on developer experience level
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <PricingPackage 
-              title="Junior Developer" 
-              price="$18 USD" 
-              period="hour"
-              description="1-2 years of experience"
-              features={juniorFeatures}
-              ctaText="Hire Now"
-            />
-            
-            <PricingPackage 
-              title="Mid-Level Developer" 
-              price="$28 USD"
-              period="hour"
-              description="3-5 years of experience"
-              features={midLevelFeatures}
-              highlighted={true}
-              ctaText="Most Popular"
-            />
-            
-            <PricingPackage 
-              title="Senior Developer" 
-              price="$40 USD"
-              period="hour"
-              description="5+ years of experience"
-              features={seniorFeatures}
-              ctaText="Contact Us"
-            />
-          </div>
-          
-          <div className="mt-12 text-center">
-            <p className="text-gray-300 mb-4">
-              Need a full development team? Contact us for custom team pricing and availability.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
       <section className="py-20 bg-black/90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              How It Works
+              Dedicated Developer Packages
             </h2>
             <p className="text-lg text-gray-300">
-              Our streamlined process for engaging dedicated developers
+              Choose the package that best suits your project needs
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {[
-                {
-                  title: "Requirements Analysis",
-                  description: "We start by understanding your project needs, technical requirements, and team composition needs."
-                },
-                {
-                  title: "Developer Selection",
-                  description: "Based on your requirements, we recommend suitable developers with the right skills and experience."
-                },
-                {
-                  title: "Onboarding",
-                  description: "The selected developers are introduced to your team and briefed on the project details."
-                },
-                {
-                  title: "Development Process",
-                  description: "Our developers work on your project, following your preferred methodology and communication protocols."
-                },
-                {
-                  title: "Regular Reporting",
-                  description: "Receive consistent updates on progress, with daily or weekly reports based on your preference."
-                },
-                {
-                  title: "Quality Assurance",
-                  description: "All deliverables undergo rigorous testing to ensure they meet our quality standards and your requirements."
-                }
-              ].map((step, index) => (
-                <div key={index} className="relative mb-8 md:mb-12 pl-8 md:pl-0">
-                  <div className="hidden md:block absolute left-0 top-0 ml-14 h-full w-0.5 bg-pinkish-red/30"></div>
-                  
-                  <div className="flex flex-col md:flex-row gap-4">
-                    <div className="flex md:flex-col items-center">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-pinkish-red text-white font-bold z-10">
-                        {index + 1}
-                      </div>
-                      <div className="md:w-28 h-0.5 md:h-0 md:mt-4 bg-pinkish-red/30 flex-grow md:flex-grow-0 mx-3 md:mx-0"></div>
-                    </div>
-                    <div className="glass-card p-6 flex-grow mt-3 md:mt-0">
-                      <h3 className="text-xl font-semibold mb-2 text-white">{step.title}</h3>
-                      <p className="text-gray-300">{step.description}</p>
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <PricingPackage 
+              title="Basic Package" 
+              price="$4,000 USD" 
+              period="month"
+              description="Ideal for small to medium-sized projects"
+              features={basicFeatures}
+              ctaText="Get Started"
+            />
+            
+            <PricingPackage 
+              title="Premium Package" 
+              price="$7,000 USD"
+              period="month"
+              description="Perfect for large-scale and complex projects"
+              features={premiumFeatures}
+              ctaText="Contact Us"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 bg-black relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              Technology Expertise
+            </h2>
+            <p className="text-lg text-gray-300">
+              Our developers are proficient in a wide range of technologies
+            </p>
+          </div>
+
+          <div className="glass-card p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4">Frontend Technologies</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">React</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">Vue.js</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">Angular</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">TypeScript</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">Next.js</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">Tailwind</span>
                   </div>
                 </div>
-              ))}
+                
+                <h3 className="text-xl font-semibold text-white mt-8 mb-4">Backend Technologies</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">Node.js</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">PHP</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">Python</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">Java</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">MongoDB</span>
+                  </div>
+                  <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
+                    <span className="text-white">SQL</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                  alt="Developer working on code" 
+                  className="rounded-lg w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-black relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-300">
+              Answers to common questions about our dedicated developer services
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">What is a dedicated developer?</h3>
+              <p className="text-gray-300 mb-4">
+                A dedicated developer is a software engineer who works exclusively on your projects, providing focused attention and expertise.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-2">How do you match developers to projects?</h3>
+              <p className="text-gray-300 mb-4">
+                We carefully assess your project requirements and tech stack to match you with a developer who has the right skills and experience.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-2">What if I'm not satisfied with the developer?</h3>
+              <p className="text-gray-300 mb-4">
+                We offer a satisfaction guarantee. If you're not happy with your developer, we'll find a replacement at no additional cost.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">What communication tools do you use?</h3>
+              <p className="text-gray-300 mb-4">
+                We use a variety of communication tools, including email, Slack, and video conferencing, to ensure seamless collaboration.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-2">How do you ensure code quality?</h3>
+              <p className="text-gray-300 mb-4">
+                We follow industry best practices for code quality, including code reviews, testing, and continuous integration.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-2">Can I scale my team up or down as needed?</h3>
+              <p className="text-gray-300 mb-4">
+                Yes, we offer flexible contract options that allow you to scale your team up or down as your project needs evolve.
+              </p>
             </div>
           </div>
         </div>

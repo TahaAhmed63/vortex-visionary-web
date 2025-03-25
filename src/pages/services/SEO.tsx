@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
@@ -103,8 +102,9 @@ const SEO = () => {
 
   return (
     <ServicePageLayout
-      title="Search Engine Optimization (SEO)"
-      description="Increase your online visibility and drive organic traffic with our data-driven SEO strategies tailored to your business goals."
+      title="Search Engine Optimization"
+      description="Drive organic traffic and increase your online visibility with our SEO services."
+      heroImage="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
       <section className="py-20 bg-black relative">
@@ -129,6 +129,7 @@ const SEO = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+                image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1571844511263-55af08fff4cf' : '1552664730-b9ef494abaa5'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
               />
             ))}
           </div>
@@ -225,6 +226,60 @@ const SEO = () => {
                   <span>Conversion rate improved by 24%, leading to a significant increase in sales</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Section */}
+      <section className="py-20 bg-black relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              SEO Success Story
+            </h2>
+            <p className="text-lg text-gray-300">
+              Real results from our comprehensive SEO strategy
+            </p>
+          </div>
+
+          <div className="glass-card p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">Local Business Growth</h3>
+                <p className="text-gray-300 mb-6">
+                  A local service business struggling to compete in a saturated market needed to improve their online visibility.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">Comprehensive keyword research and competitive analysis</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">On-page optimization of all service pages</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">Local SEO strategy including Google Business Profile optimization</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">Content strategy with bi-weekly blog posts</span>
+                  </div>
+                </div>
+                <div className="bg-pinkish-red/10 p-4 rounded-lg border border-pinkish-red/30">
+                  <p className="text-white font-medium">Results:</p>
+                  <p className="text-gray-300">First page rankings for 27 target keywords and 112% increase in organic traffic within 6 months.</p>
+                </div>
+              </div>
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2534&q=80" 
+                  alt="SEO growth analytics" 
+                  className="rounded-lg w-full shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </div>

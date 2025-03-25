@@ -4,7 +4,7 @@ import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
 import Testimonial from '@/components/services/Testimonial';
-import { Palette, Layout, Code, Search, Globe, FileCode, Laptop } from 'lucide-react';
+import { Code, Smartphone, Globe, Database, Server, Lock } from 'lucide-react';
 
 const WebDevelopment = () => {
   useEffect(() => {
@@ -41,34 +41,36 @@ const WebDevelopment = () => {
 
   const features = [
     {
-      icon: <Palette className="w-7 h-7" />,
-      title: "Custom Design",
-      description: "Aesthetically pleasing designs tailored to match your brand identity and appeal to your target audience."
-    },
-    {
-      icon: <Layout className="w-7 h-7" />,
-      title: "Responsive Layout",
-      description: "Websites that look and function perfectly across all devices - from desktops to smartphones."
-    },
-    {
       icon: <Code className="w-7 h-7" />,
-      title: "Clean Code",
-      description: "Well-structured, easy-to-maintain code that ensures your website runs smoothly and efficiently."
+      title: "Custom Web Development",
+      description: "Tailor-made websites designed to meet your specific business needs and goals.",
+      image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
-      icon: <Search className="w-7 h-7" />,
-      title: "SEO-Ready",
-      description: "Built with search engines in mind to enhance your visibility and drive organic traffic."
+      icon: <Smartphone className="w-7 h-7" />,
+      title: "Responsive Design",
+      description: "Websites that look and function beautifully on all devices, from desktops to smartphones.",
+      image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Globe className="w-7 h-7" />,
-      title: "E-commerce Integration",
-      description: "Secure payment gateways and product management systems for seamless online selling."
+      title: "E-commerce Solutions",
+      description: "Secure, scalable online stores with seamless payment gateway integration."
     },
     {
-      icon: <FileCode className="w-7 h-7" />,
-      title: "Custom Functionality",
-      description: "Bespoke features and plugins developed to meet your specific business requirements."
+      icon: <Database className="w-7 h-7" />,
+      title: "Content Management Systems",
+      description: "User-friendly CMS implementation allowing you to update your website with ease."
+    },
+    {
+      icon: <Server className="w-7 h-7" />,
+      title: "Web Application Development",
+      description: "Custom web applications that automate processes and enhance productivity."
+    },
+    {
+      icon: <Lock className="w-7 h-7" />,
+      title: "Website Security",
+      description: "Comprehensive security measures to protect your website and user data."
     }
   ];
 
@@ -86,57 +88,43 @@ const WebDevelopment = () => {
   ];
 
   const businessFeatures: PricingFeature[] = [
-    { text: "Custom template/theme selection", included: true },
+    { text: "All features in the Starter Package", included: true },
     { text: "Up to 100 product uploads", included: true },
-    { text: "Payment gateway integration", included: true },
-    { text: "Responsive design", included: true },
-    { text: "Home page slider", included: true },
-    { text: "Training for website management", included: true },
-    { text: "2-months free technical support", included: true },
     { text: "Advanced SEO optimization", included: true },
     { text: "Social media integration", included: true },
+    { text: "2 months free technical support", included: true },
     { text: "Custom plugin development", included: false }
   ];
 
   const enterpriseFeatures: PricingFeature[] = [
-    { text: "Custom template/theme selection", included: true },
+    { text: "All features in the Business Package", included: true },
     { text: "Unlimited product uploads", included: true },
-    { text: "Payment gateway integration", included: true },
-    { text: "Responsive design", included: true },
-    { text: "Home page slider", included: true },
-    { text: "Training for website management", included: true },
-    { text: "3-months free technical support", included: true },
-    { text: "Advanced SEO optimization", included: true },
-    { text: "Social media integration", included: true },
-    { text: "Custom plugin development", included: true }
+    { text: "Custom plugin development", included: true },
+    { text: "Priority support with 3 months free technical assistance", included: true }
   ];
 
   const testimonials = [
     {
-      quote: "Working with Vortex Solution was a game-changer for our business. They delivered a stunning website that perfectly captures our brand and has significantly increased our online conversions.",
-      author: "Sarah Johnson",
-      company: "Bright Ideas Co.",
-      rating: 5
+      quote: "Working with this team was a game-changer for our business. The website they created not only looks fantastic but has significantly improved our conversion rates.",
+      author: "Michael Stevens",
+      company: "TechCorp Solutions",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
     },
     {
-      quote: "The team's attention to detail and technical expertise are unmatched. Our e-commerce platform is not only beautiful but also incredibly functional and easy to manage.",
-      author: "David Chen",
-      company: "EcoGoods Inc.",
-      rating: 5
-    },
-    {
-      quote: "From concept to launch, Vortex Solution guided us through the entire process with professionalism and creativity. The final product exceeded our expectations.",
-      author: "Michael Rodriguez",
-      company: "InnoTech Solutions",
-      rating: 5
+      quote: "The attention to detail and responsive design has made our e-commerce store accessible to customers on all devices. Sales have increased by 45% since the redesign.",
+      author: "Emily Johnson",
+      company: "Fashion Forward",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80"
     }
   ];
 
   return (
     <ServicePageLayout
       title="Web Design & Development"
-      description="Custom, responsive websites tailored to your business needs, from simple informational sites to complex e-commerce platforms."
-      heroImage="/lovable-uploads/03_23_2025_X-Design (3).png"
+      description="Custom, responsive websites and applications that drive business growth."
+      heroImage="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2339&q=80"
     >
       {/* Features Section */}
       <section className="py-20 bg-black relative">
@@ -147,10 +135,10 @@ const WebDevelopment = () => {
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 section-fade-in">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Why Choose Our Web Development Services?
+              Our Web Development Services
             </h2>
             <p className="text-lg text-gray-300">
-              We create custom websites that deliver exceptional user experiences and drive results for your business.
+              Custom website solutions designed to showcase your brand and drive growth
             </p>
           </div>
 
@@ -161,119 +149,9 @@ const WebDevelopment = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+                image={feature.image}
               />
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20 bg-black/90 relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Our Development Process
-            </h2>
-            <p className="text-lg text-gray-300">
-              A structured approach that delivers results on time and on budget
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-white font-bold mr-4">1</div>
-                  <h3 className="text-xl font-semibold">Discovery & Planning</h3>
-                </div>
-                <p className="text-gray-300 pl-14">We start by understanding your business goals, target audience, and functional requirements to develop a strategic plan.</p>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-white font-bold mr-4">2</div>
-                  <h3 className="text-xl font-semibold">Design & Prototyping</h3>
-                </div>
-                <p className="text-gray-300 pl-14">Our designers create wireframes and visual mockups, refining the user experience and interface based on your feedback.</p>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-white font-bold mr-4">3</div>
-                  <h3 className="text-xl font-semibold">Development</h3>
-                </div>
-                <p className="text-gray-300 pl-14">Our developers bring the designs to life with clean, efficient code, implementing all functionality and features.</p>
-              </div>
-              
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-white font-bold mr-4">4</div>
-                  <h3 className="text-xl font-semibold">Testing & Launch</h3>
-                </div>
-                <p className="text-gray-300 pl-14">Rigorous testing across devices and browsers ensures your website is bug-free and ready for a successful launch.</p>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="relative rounded-xl overflow-hidden shadow-2xl border border-pinkish-red/20">
-                <img 
-                  src="/lovable-uploads/03_23_2025_X-Design (1).png" 
-                  alt="Web Development Process" 
-                  className="w-full h-auto"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <div className="flex items-center">
-                    <Laptop className="w-8 h-8 text-pinkish-red mr-3" />
-                    <div>
-                      <h4 className="text-white font-semibold">Expert Development</h4>
-                      <p className="text-gray-300 text-sm">Cutting-edge technology, exceptional results</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-black relative section-fade-in">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Affordable Web Development Packages
-            </h2>
-            <p className="text-lg text-gray-300">
-              Choose the package that fits your business needs and budget
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <PricingPackage 
-              title="Starter Package" 
-              price="$800 USD" 
-              description="Perfect for small businesses and startups looking to establish an online presence"
-              features={starterFeatures}
-              ctaText="Get Started"
-            />
-            
-            <PricingPackage 
-              title="Business Package" 
-              price="$1,500 USD"
-              description="Ideal for growing businesses requiring additional features and customization"
-              features={businessFeatures}
-              highlighted={true}
-              ctaText="Most Popular"
-            />
-            
-            <PricingPackage 
-              title="Enterprise Package" 
-              price="$2,200 USD"
-              description="Comprehensive solution for established businesses with complex requirements"
-              features={enterpriseFeatures}
-              ctaText="Contact Us"
-            />
           </div>
         </div>
       </section>
@@ -283,101 +161,119 @@ const WebDevelopment = () => {
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              What Our Clients Say
+              Client Success Stories
             </h2>
             <p className="text-lg text-gray-300">
-              Don't just take our word for it - hear from businesses we've helped
+              Hear from businesses that have transformed their online presence
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Testimonial 
+              <Testimonial
                 key={index}
                 quote={testimonial.quote}
                 author={testimonial.author}
                 company={testimonial.company}
                 rating={testimonial.rating}
+                image={testimonial.image}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Case Study Section */}
       <section className="py-20 bg-black relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Our Recent Projects
+              Featured Case Study
             </h2>
             <p className="text-lg text-gray-300">
-              Explore some of our latest web development work
+              See how we helped transform an e-commerce business
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((_, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-xl">
-                <img 
-                  src={`/lovable-uploads/03_23_2025_X-Design (${index + 1}).png`} 
-                  alt={`Portfolio Project ${index + 1}`} 
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <h3 className="text-xl font-semibold text-white">Project Name {index + 1}</h3>
-                  <p className="text-gray-300">Web Development, E-commerce</p>
+          <div className="glass-card p-8 md:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">E-Commerce Platform Redesign</h3>
+                <p className="text-gray-300 mb-6">
+                  A well-established retail business needed to modernize their online store to improve user experience and increase sales.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">Complete redesign with modern UI/UX principles</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">Mobile-first approach ensuring perfect responsiveness</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">Streamlined checkout process reducing abandonment by 35%</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="mt-1 mr-3 text-pinkish-red">✓</div>
+                    <span className="text-gray-300">Integration with multiple payment gateways</span>
+                  </div>
+                </div>
+                <div className="bg-pinkish-red/10 p-4 rounded-lg border border-pinkish-red/30">
+                  <p className="text-white font-medium">Results:</p>
+                  <p className="text-gray-300">58% increase in mobile conversions and 42% overall sales growth within 3 months of launch.</p>
                 </div>
               </div>
-            ))}
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                  alt="E-commerce platform case study" 
+                  className="rounded-lg w-full shadow-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-black relative section-fade-in">
+      {/* Pricing Section */}
+      <section className="py-20 bg-black/90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
-              Frequently Asked Questions
+              Web Development Packages
             </h2>
             <p className="text-lg text-gray-300">
-              Answers to common questions about our web development services
+              Choose the package that best suits your business needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                q: "How long does it take to build a website?",
-                a: "The timeline varies depending on the complexity of the project. A basic website typically takes 2-4 weeks, while more complex sites can take 6-12 weeks or longer."
-              },
-              {
-                q: "Do you provide website maintenance after launch?",
-                a: "Yes, we offer various maintenance packages to ensure your website remains secure, up-to-date, and performing optimally after launch."
-              },
-              {
-                q: "Can you redesign my existing website?",
-                a: "Absolutely! We specialize in website redesigns that improve both aesthetics and functionality while preserving your brand identity."
-              },
-              {
-                q: "Do you provide content for my website?",
-                a: "While we can provide guidance on content strategy, clients typically provide their own content. We can recommend professional copywriters if needed."
-              },
-              {
-                q: "Will my website be mobile-friendly?",
-                a: "Yes, all our websites are built with responsive design to ensure they look and function beautifully on all devices."
-              },
-              {
-                q: "What payment methods do you accept?",
-                a: "We accept credit cards, bank transfers, and PayPal. Projects typically require a 50% deposit to begin work, with the balance due upon completion."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="border border-pinkish-red/30 rounded-xl p-6 hover:border-pinkish-red/50 transition-colors">
-                <h3 className="text-xl font-semibold mb-3 text-white">{faq.q}</h3>
-                <p className="text-gray-300">{faq.a}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <PricingPackage 
+              title="Starter Package" 
+              price="$800 USD" 
+              description="Perfect for small businesses looking to establish an online presence"
+              features={starterFeatures}
+              ctaText="Get Started"
+            />
+            
+            <PricingPackage 
+              title="Business Package" 
+              price="$1,500 USD"
+              popular={true}
+              description="Ideal for growing businesses with more advanced requirements"
+              features={businessFeatures}
+              ctaText="Choose Business"
+            />
+            
+            <PricingPackage 
+              title="Enterprise Package" 
+              price="$2,200 USD"
+              description="Comprehensive solution for established businesses with complex needs"
+              features={enterpriseFeatures}
+              ctaText="Contact Us"
+            />
           </div>
         </div>
       </section>
