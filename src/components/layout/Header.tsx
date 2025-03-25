@@ -108,7 +108,7 @@ const Header = () => {
                               <NavigationMenuLink asChild>
                                 <Link
                                   to={service.href}
-                                  className="block mx-2 select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800/50 hover:text-electric-blue"
+                                  className="block  select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800/50 hover:text-electric-blue"
                                 >
                                   <div className="text-sm font-medium text-white">{service.name}</div>
                                   <p className="line-clamp-2 text-sm leading-snug text-gray-400">
@@ -193,7 +193,7 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-3 mx-2 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
+                      className="block px-3  py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
