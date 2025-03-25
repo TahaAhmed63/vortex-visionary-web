@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
+import Testimonial from '@/components/services/Testimonial';
 import { Megaphone, BarChart2, Target, Users, Share2, Smartphone } from 'lucide-react';
 
 const DigitalMarketing = () => {
@@ -42,32 +43,38 @@ const DigitalMarketing = () => {
     {
       icon: <Megaphone className="w-7 h-7" />,
       title: "Social Media Marketing",
-      description: "Strategic content creation and community management to build your brand presence across social platforms."
+      description: "Strategic content creation and community management to build your brand presence across social platforms.",
+      image: "https://images.unsplash.com/photo-1611926653458-09294b3142bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Target className="w-7 h-7" />,
       title: "Pay-Per-Click Advertising",
-      description: "Targeted ad campaigns on Google, Facebook, Instagram, and other platforms to drive qualified traffic."
+      description: "Targeted ad campaigns on Google, Facebook, Instagram, and other platforms to drive qualified traffic.",
+      image: "https://images.unsplash.com/photo-1611746869696-d09bce200020?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Users className="w-7 h-7" />,
       title: "Audience Targeting",
-      description: "Advanced audience segmentation to ensure your marketing reaches the right people at the right time."
+      description: "Advanced audience segmentation to ensure your marketing reaches the right people at the right time.",
+      image: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Share2 className="w-7 h-7" />,
       title: "Content Marketing",
-      description: "Creation and distribution of valuable content to attract and engage your target audience."
+      description: "Creation and distribution of valuable content to attract and engage your target audience.",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Smartphone className="w-7 h-7" />,
       title: "Mobile Marketing",
-      description: "Strategies optimized for mobile users to capture the growing segment of on-the-go consumers."
+      description: "Strategies optimized for mobile users to capture the growing segment of on-the-go consumers.",
+      image: "https://images.unsplash.com/photo-1556656793-08538906a9f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <BarChart2 className="w-7 h-7" />,
       title: "Analytics & Reporting",
-      description: "Comprehensive tracking and analysis to measure campaign performance and ROI."
+      description: "Comprehensive tracking and analysis to measure campaign performance and ROI.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     }
   ];
 
@@ -91,10 +98,28 @@ const DigitalMarketing = () => {
     { text: "Remarketing campaigns", included: true }
   ];
 
+  const testimonials = [
+    {
+      quote: "The digital marketing strategy developed by this team transformed our online presence. Our e-commerce sales increased by 68% in just three months!",
+      author: "Jessica Miller",
+      company: "Urban Boutique",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      quote: "Their PPC campaign management is exceptional. They reduced our cost per lead by 40% while simultaneously increasing our conversion rate.",
+      author: "David Chen",
+      company: "TechSolutions Inc.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+    }
+  ];
+
   return (
     <ServicePageLayout
       title="Digital Marketing Solutions"
       description="Expand your online presence and engage your target audience with our strategic digital marketing services."
+      heroImage="https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2342&q=80"
     >
       {/* Features Section */}
       <section className="py-20 bg-black relative">
@@ -119,6 +144,34 @@ const DigitalMarketing = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
+                image={feature.image}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-black/90 relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
+              What Our Clients Say
+            </h2>
+            <p className="text-lg text-gray-300">
+              Hear from businesses that have transformed their digital presence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <Testimonial
+                key={index}
+                quote={testimonial.quote}
+                author={testimonial.author}
+                company={testimonial.company}
+                rating={testimonial.rating}
+                image={testimonial.image}
               />
             ))}
           </div>
@@ -196,6 +249,11 @@ const DigitalMarketing = () => {
                   <span className="text-gray-300">Increase in conversion rate</span>
                 </div>
               </div>
+              <img 
+                src="https://images.unsplash.com/photo-1556741533-6e6a62bd8b49?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                alt="Fashion social media marketing" 
+                className="w-full h-auto rounded-lg"
+              />
             </div>
 
             <div className="glass-card p-8">
@@ -222,6 +280,11 @@ const DigitalMarketing = () => {
                   <span className="text-gray-300">Return on ad spend</span>
                 </div>
               </div>
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2426&q=80" 
+                alt="SaaS marketing dashboard" 
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
         </div>

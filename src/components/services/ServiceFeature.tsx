@@ -5,9 +5,10 @@ interface ServiceFeatureProps {
   icon: ReactNode;
   title: string;
   description: string;
+  image?: string;
 }
 
-const ServiceFeature = ({ icon, title, description }: ServiceFeatureProps) => {
+const ServiceFeature = ({ icon, title, description, image }: ServiceFeatureProps) => {
   return (
     <div className="feature-card group">
       <div className="flex flex-col h-full">
@@ -15,7 +16,18 @@ const ServiceFeature = ({ icon, title, description }: ServiceFeatureProps) => {
           {icon}
         </div>
         <h3 className="mb-3 text-xl font-semibold text-white">{title}</h3>
-        <p className="text-gray-300">{description}</p>
+        <p className="text-gray-300 mb-4">{description}</p>
+        
+        {image && (
+          <div className="mt-auto pt-3">
+            <img 
+              src={image} 
+              alt={title} 
+              className="w-full h-auto rounded-lg object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              style={{ aspectRatio: '16/9' }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
