@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -91,14 +90,14 @@ const Header = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* Desktop Navigation - Fixed spacing */}
+          <nav className="hidden md:flex items-center">
             <NavigationMenu>
-              <NavigationMenuList>
+              <NavigationMenuList className="gap-6">
                 {navItems.map((item) => 
                   item.hasSubmenu ? (
                     <NavigationMenuItem key={item.name} className="relative">
-                      <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200 bg-transparent">
+                      <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200 bg-transparent px-3 py-2">
                         {item.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent className="bg-midnight-blue/95 backdrop-blur-md border-gray-800">
@@ -108,7 +107,7 @@ const Header = () => {
                               <NavigationMenuLink asChild>
                                 <Link
                                   to={service.href}
-                                  className="block  select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800/50 hover:text-electric-blue"
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800/50 hover:text-electric-blue"
                                 >
                                   <div className="text-sm font-medium text-white">{service.name}</div>
                                   <p className="line-clamp-2 text-sm leading-snug text-gray-400">
@@ -122,10 +121,10 @@ const Header = () => {
                       </NavigationMenuContent>
                     </NavigationMenuItem>
                   ) : (
-                    <NavigationMenuItem key={item.name}>
+                    <NavigationMenuItem key={item.name} className="px-3 py-2">
                       <a
                         href={item.href}
-                        className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200 link-hover"
+                        className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200"
                       >
                         {item.name}
                       </a>
@@ -157,7 +156,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu - Improved responsive design */}
+        {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden fixed top-[calc(100%)] left-0 right-0 max-h-[80vh] overflow-y-auto bg-midnight-blue/95 shadow-lg animate-fade-in z-50">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -178,7 +177,7 @@ const Header = () => {
                             <Link
                               key={service.name}
                               to={service.href}
-                              className="block px-3 py-2  rounded-md text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-electric-blue"
+                              className="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-electric-blue"
                               onClick={() => {
                                 setMobileMenuOpen(false);
                                 setServiceSubmenuOpen(false);
@@ -193,7 +192,7 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-3  py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
