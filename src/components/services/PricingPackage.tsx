@@ -16,6 +16,7 @@ interface PricingPackageProps {
   description?: string;
   features: PricingFeature[];
   highlighted?: boolean;
+  popular?: boolean; // Add this optional prop
   ctaText?: string;
   onCtaClick?: () => void;
 }
