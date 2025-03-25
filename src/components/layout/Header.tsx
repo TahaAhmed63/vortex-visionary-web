@@ -193,7 +193,7 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
+                      className="block px-3 mx-2 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
