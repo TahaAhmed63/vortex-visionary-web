@@ -5,6 +5,7 @@ import PricingPackage, { PricingFeature } from '@/components/services/PricingPac
 import ServiceFeature from '@/components/services/ServiceFeature';
 import Testimonial from '@/components/services/Testimonial';
 import { Code, Smartphone, Globe, Database, Server, Lock } from 'lucide-react';
+import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const WebDevelopment = () => {
   useEffect(() => {
@@ -44,13 +45,13 @@ const WebDevelopment = () => {
       icon: <Code className="w-7 h-7" />,
       title: "Custom Web Development",
       description: "Tailor-made websites designed to meet your specific business needs and goals.",
-      image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+      // image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Smartphone className="w-7 h-7" />,
       title: "Responsive Design",
       description: "Websites that look and function beautifully on all devices, from desktops to smartphones.",
-      image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+      // image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     },
     {
       icon: <Globe className="w-7 h-7" />,
@@ -127,7 +128,7 @@ const WebDevelopment = () => {
       heroImage="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2339&q=80"
     >
       {/* Features Section */}
-      <section className="py-20 bg-black relative">
+      <section className="py-20  relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
@@ -137,7 +138,7 @@ const WebDevelopment = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Our Web Development Services
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Custom website solutions designed to showcase your brand and drive growth
             </p>
           </div>
@@ -149,7 +150,7 @@ const WebDevelopment = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                image={feature.image}
+                // image={feature?.image}
               />
             ))}
           </div>
@@ -157,13 +158,13 @@ const WebDevelopment = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-black/90 relative section-fade-in">
+      <section className="py-20 /90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Client Success Stories
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Hear from businesses that have transformed their online presence
             </p>
           </div>
@@ -184,13 +185,13 @@ const WebDevelopment = () => {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-20 bg-black relative section-fade-in">
+      <section className="py-20  relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Featured Case Study
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               See how we helped transform an e-commerce business
             </p>
           </div>
@@ -198,31 +199,31 @@ const WebDevelopment = () => {
           <div className="glass-card p-8 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">E-Commerce Platform Redesign</h3>
-                <p className="text-gray-300 mb-6">
+                <h3 className="text-2xl font-bold  mb-4">E-Commerce Platform Redesign</h3>
+                <p className="text-gray-600 mb-6">
                   A well-established retail business needed to modernize their online store to improve user experience and increase sales.
                 </p>
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start">
                     <div className="mt-1 mr-3 text-pinkish-red">✓</div>
-                    <span className="text-gray-300">Complete redesign with modern UI/UX principles</span>
+                    <span className="text-gray-600">Complete redesign with modern UI/UX principles</span>
                   </div>
                   <div className="flex items-start">
                     <div className="mt-1 mr-3 text-pinkish-red">✓</div>
-                    <span className="text-gray-300">Mobile-first approach ensuring perfect responsiveness</span>
+                    <span className="text-gray-600">Mobile-first approach ensuring perfect responsiveness</span>
                   </div>
                   <div className="flex items-start">
                     <div className="mt-1 mr-3 text-pinkish-red">✓</div>
-                    <span className="text-gray-300">Streamlined checkout process reducing abandonment by 35%</span>
+                    <span className="text-gray-600">Streamlined checkout process reducing abandonment by 35%</span>
                   </div>
                   <div className="flex items-start">
                     <div className="mt-1 mr-3 text-pinkish-red">✓</div>
-                    <span className="text-gray-300">Integration with multiple payment gateways</span>
+                    <span className="text-gray-600">Integration with multiple payment gateways</span>
                   </div>
                 </div>
                 <div className="bg-pinkish-red/10 p-4 rounded-lg border border-pinkish-red/30">
-                  <p className="text-white font-medium">Results:</p>
-                  <p className="text-gray-300">58% increase in mobile conversions and 42% overall sales growth within 3 months of launch.</p>
+                  <p className=" font-medium">Results:</p>
+                  <p className="text-gray-600">58% increase in mobile conversions and 42% overall sales growth within 3 months of launch.</p>
                 </div>
               </div>
               <div>
@@ -236,15 +237,15 @@ const WebDevelopment = () => {
           </div>
         </div>
       </section>
-
+<QuoteFormSection/>
       {/* Pricing Section */}
-      <section className="py-20 bg-black/90 relative section-fade-in">
+      {/* <section className="py-20 /90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Web Development Packages
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Choose the package that best suits your business needs
             </p>
           </div>
@@ -276,7 +277,7 @@ const WebDevelopment = () => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </ServicePageLayout>
   );
 };

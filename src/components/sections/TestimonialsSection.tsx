@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="py-20 bg-black relative">
+    <section id="testimonials" className="py-20 bg-white relative">
       {/* Background decorations */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
           <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
             <span className="text-sm font-medium text-pinkish-red">Testimonials</span>
           </div>
-          <h2 className="section-title text-gradient">
+          <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
             What Our Clients Say
           </h2>
           <p className="section-subtitle">
@@ -117,7 +117,7 @@ const TestimonialsSection = () => {
                     </div>
                     <div className="flex-grow text-center md:text-left">
                       <RatingStars rating={testimonial.rating} />
-                      <blockquote className="mt-4 text-lg text-white italic leading-relaxed">
+                      <blockquote className="mt-4 text-lg text-black italic leading-relaxed">
                         "{testimonial.content}"
                       </blockquote>
                       <div className="mt-6">

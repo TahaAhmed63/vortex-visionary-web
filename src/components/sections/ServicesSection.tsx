@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react';
 import { Brain, Users, Code, TrendingUp, Server, Smartphone, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -22,8 +21,8 @@ const ServiceCard = ({ icon, title, description, delay, linkTo }: ServiceCardPro
         <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-pinkish-red/10 text-pinkish-red transition-all duration-300 group-hover:bg-pinkish-red group-hover:text-white">
           {icon}
         </div>
-        <h3 className="mb-3 text-xl font-semibold text-white">{title}</h3>
-        <p className="mb-5 text-gray-300 flex-grow">{description}</p>
+        <h3 className="mb-3 text-xl font-semibold text-gray-900">{title}</h3>
+        <p className="mb-5 text-gray-600 flex-grow">{description}</p>
         <Link to={linkTo}>
           <Button 
             variant="ghost" 
@@ -104,11 +103,11 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-black relative" ref={sectionRef}>
+    <section id="services" className="py-24 bg-white relative" ref={sectionRef}>
       {/* Background decorations */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/5 rounded-full blur-[100px] opacity-20"></div>
       </div>
       
       <div className="section-container section-fade-in relative z-10">
@@ -116,10 +115,10 @@ const ServicesSection = () => {
           <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
             <span className="text-sm font-medium text-pinkish-red">Our Services</span>
           </div>
-          <h2 className="section-title text-gradient">
+          <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
             Comprehensive Digital Solutions
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle text-gray-600">
             We offer a full spectrum of services to help businesses thrive in the digital age
           </p>
         </div>
@@ -140,6 +139,7 @@ const ServicesSection = () => {
         <div className="mt-16 text-center">
           <Button 
             size="lg"
+            className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white font-medium rounded-md px-8 py-6 transition-all duration-300 shadow-md hover:shadow-pinkish-red/30"
             onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Discuss Your Project

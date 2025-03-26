@@ -112,7 +112,7 @@ const VideoAnimation = () => {
       heroImage="https://images.unsplash.com/photo-1574717024453-354a08aab7c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
-      <section className="py-20 bg-black relative">
+      <section className="py-20  relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
@@ -122,7 +122,7 @@ const VideoAnimation = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Our Video Animation Services
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Bring your ideas to life with engaging and informative animated videos
             </p>
           </div>
@@ -134,7 +134,7 @@ const VideoAnimation = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1551244072-237a26d3e658' : '1580136895875-4227dfd03166'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
+                // image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1551244072-237a26d3e658' : '1580136895875-4227dfd03166'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
               />
             ))}
           </div>
@@ -142,13 +142,13 @@ const VideoAnimation = () => {
       </section>
 
       {/* Package Section */}
-      <section className="py-20 bg-black/90 relative section-fade-in">
+      <section className="py-20 /90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Explainer Video Package
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Professional 60-second animated video to explain your product or service
             </p>
           </div>
@@ -156,37 +156,37 @@ const VideoAnimation = () => {
           <div className="glass-card p-8 md:p-12 max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="w-full md:w-1/2">
-                <div className="aspect-video bg-black/50 rounded-xl overflow-hidden border border-pinkish-red/30 relative">
+                <div className="aspect-video /50 rounded-xl overflow-hidden border border-pinkish-red/30 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-pinkish-red/80 flex items-center justify-center cursor-pointer hover:bg-pinkish-red transition-colors">
-                      <Video className="w-7 h-7 text-white" />
+                      <Video className="w-7 h-7 text-gray-600" />
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="w-full md:w-1/2">
-                <h3 className="text-2xl font-semibold mb-3 text-white">60-Second Explainer Video</h3>
-                <p className="text-gray-300 mb-4">
+                <h3 className="text-2xl font-semibold mb-3 text-gray-600">60-Second Explainer Video</h3>
+                <p className="text-gray-600 mb-4">
                   A professionally crafted animated video that clearly explains your product or service to your target audience.
                 </p>
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-300">Custom script and storyboard</span>
+                    <span className="text-gray-600">Custom script and storyboard</span>
                   </div>
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-300">Professional voiceover</span>
+                    <span className="text-gray-600">Professional voiceover</span>
                   </div>
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-300">Music and sound effects</span>
+                    <span className="text-gray-600">Music and sound effects</span>
                   </div>
                   <div className="flex items-start">
                     <Play className="w-5 h-5 text-pinkish-red mr-2 mt-1" />
-                    <span className="text-gray-300">Two rounds of revisions</span>
+                    <span className="text-gray-600">Two rounds of revisions</span>
                   </div>
                 </div>
                 
@@ -207,13 +207,13 @@ const VideoAnimation = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-black relative section-fade-in">
+      <section className="py-20  relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Our Animation Process
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               A structured approach to creating effective animated videos
             </p>
           </div>
@@ -222,12 +222,12 @@ const VideoAnimation = () => {
             {process.map((step, index) => (
               <div key={index} className="glass-card p-6">
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-white font-bold mr-4">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-pinkish-red text-gray-600 font-bold mr-4">
                     {index + 1}
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-600">{step.title}</h3>
                 </div>
-                <p className="text-gray-300 pl-14">{step.description}</p>
+                <p className="text-gray-600 pl-14">{step.description}</p>
               </div>
             ))}
           </div>
@@ -235,13 +235,13 @@ const VideoAnimation = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20 bg-black relative section-fade-in">
+      <section className="py-20  relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Animation Portfolio
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Examples of our video animation work
             </p>
           </div>
@@ -254,13 +254,13 @@ const VideoAnimation = () => {
                   alt="Product Explainer Animation" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-xl font-medium">Product Explainer</span>
+                <div className="absolute inset-0 /50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-gray-600 text-xl font-medium">Product Explainer</span>
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-xl font-semibold text-white mb-2">Product Explainer Animation</h3>
-                <p className="text-gray-300">
+                <h3 className="text-xl font-semibold text-gray-600 mb-2">Product Explainer Animation</h3>
+                <p className="text-gray-600">
                   An engaging animation that clearly demonstrates product features and benefits.
                 </p>
               </div>
@@ -273,13 +273,13 @@ const VideoAnimation = () => {
                   alt="Corporate Brand Story" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-xl font-medium">Brand Story</span>
+                <div className="absolute inset-0 /50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-gray-600 text-xl font-medium">Brand Story</span>
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-xl font-semibold text-white mb-2">Corporate Brand Story</h3>
-                <p className="text-gray-300">
+                <h3 className="text-xl font-semibold text-gray-600 mb-2">Corporate Brand Story</h3>
+                <p className="text-gray-600">
                   A compelling narrative animation that communicates company values and mission.
                 </p>
               </div>

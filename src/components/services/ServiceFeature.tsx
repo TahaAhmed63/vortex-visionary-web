@@ -15,8 +15,8 @@ const ServiceFeature = ({ icon, title, description, image }: ServiceFeatureProps
         <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-pinkish-red/10 text-pinkish-red transition-all duration-300 group-hover:bg-pinkish-red group-hover:text-white">
           {icon}
         </div>
-        <h3 className="mb-3 text-xl font-semibold text-white">{title}</h3>
-        <p className="text-gray-300 mb-4">{description}</p>
+        <h3 className="mb-3 text-xl font-semibold ">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
         
         {image && (
           <div className="mt-auto pt-3">

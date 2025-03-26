@@ -46,7 +46,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section id="blog" className="py-20 bg-black relative">
+    <section id="blog" className="py-20 bg-white relative">
       {/* Background decorations */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
@@ -59,7 +59,7 @@ const BlogSection = () => {
             <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
               <span className="text-sm font-medium text-pinkish-red">Blog & Insights</span>
             </div>
-            <h2 className="section-title text-gradient">
+            <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
               Latest from Our Blog
             </h2>
             <p className="section-subtitle max-w-2xl">
@@ -100,10 +100,10 @@ const BlogSection = () => {
                     {post.readTime}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pinkish-red transition-colors">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-pinkish-red transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-gray-300 mb-4">
+                <p className="text-black mb-4">
                   {post.excerpt}
                 </p>
                 <a 

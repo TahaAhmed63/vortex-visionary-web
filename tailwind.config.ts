@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -66,20 +65,24 @@ export default {
 				// Theme colors
 				'black': '#000000',
 				'dark-black': '#121212',
-				'pinkish-red': '#FF3366',
+				'pinkish-red': '#0066FF',
 				'pinkish-red-light': '#FF6699',
 				'pinkish-red-dark': '#CC2952',
 				'pure-white': '#FFFFFF',
 				'off-white': '#F5F5F5',
 				'light-gray': '#E0E0E0',
 				'dark-gray': '#333333',
-				'midnight-blue': '#090909', // Changed to near-black
+				'midnight-blue': '#090909',
 				'jet-black': '#000000',
-				'electric-blue': '#FF3366', // Changed to pinkish-red
-				'neon-purple': '#FF3366', // Changed to pinkish-red
-				'cool-gray': '#E0E0E0', // Changed to light gray
-				gold: '#FFFFFF', // Changed to white
-				'gold-dark': '#F5F5F5', // Changed to off-white
+				'electric-blue': '#0066FF',
+				'electric-blue-light': '#3399FF',
+				'electric-blue-dark': '#004DCC',
+				'neon-purple': '#9933FF',
+				'neon-purple-light': '#B366FF',
+				'neon-purple-dark': '#7A1ACC',
+				'cool-gray': '#666666',
+				gold: '#FFFFFF',
+				'gold-dark': '#F5F5F5',
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
@@ -161,8 +164,8 @@ export default {
 				'400': '400ms',
 			},
 			boxShadow: {
-				'neon-blue': '0 0 15px rgba(255, 51, 102, 0.5)', // Updated to pinkish-red
-				'neon-purple': '0 0 15px rgba(255, 51, 102, 0.5)', // Updated to pinkish-red
+				'neon-blue': '0 0 15px rgba(255, 51, 102, 0.5)',
+				'neon-purple': '0 0 15px rgba(255, 51, 102, 0.5)',
 			},
 		}
 	},

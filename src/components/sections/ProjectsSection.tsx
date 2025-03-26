@@ -114,13 +114,13 @@ console.log(filteredProjects,"filteredProjects")
   ).sort();
 
   return (
-    <section id="projects" className="py-20 bg-midnight-blue" ref={sectionRef}>
+    <section id="projects" className="py-20 bg-pure-white" ref={sectionRef}>
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 section-fade-in">
-          <span className="inline-block px-3 py-1 text-xs font-semibold text-neon-purple bg-neon-purple/10 rounded-full">
+          <span className="inline-block px-3 py-1 text-xs font-semibold text-pinkish-red bg-pinkish-red/10 rounded-full">
             Our Work
           </span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-white">
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
             Featured Projects
           </h2>
           <p className="mt-4 text-xl text-cool-gray">
@@ -129,13 +129,13 @@ console.log(filteredProjects,"filteredProjects")
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12 section-fade-in">
+        <div className="flex flex-wrap gap-2 justify-center mb-12">
           <Button 
             variant={activeFilter === 'all' ? 'default' : 'outline'} 
             onClick={() => setActiveFilter('all')}
             className={activeFilter === 'all' 
-              ? 'bg-electric-blue hover:bg-electric-blue/90' 
-              : 'border-white/20 text-white hover:bg-white/5'}
+              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white' 
+              : 'border-light-gray text-dark-gray hover:bg-off-white'}
           >
             All Projects
           </Button>
@@ -143,8 +143,8 @@ console.log(filteredProjects,"filteredProjects")
             variant={activeFilter === 'featured' ? 'default' : 'outline'} 
             onClick={() => setActiveFilter('featured')}
             className={activeFilter === 'featured' 
-              ? 'bg-electric-blue hover:bg-electric-blue/90' 
-              : 'border-white/20 text-white hover:bg-white/5'}
+              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white' 
+              : 'border-light-gray text-dark-gray hover:bg-off-white'}
           >
             Featured
           </Button>
@@ -154,8 +154,8 @@ console.log(filteredProjects,"filteredProjects")
               variant={activeFilter === tech ? 'default' : 'outline'} 
               onClick={() => setActiveFilter(tech)}
               className={activeFilter === tech 
-                ? 'bg-electric-blue hover:bg-electric-blue/90' 
-                : 'border-white/20 text-white hover:bg-white/5'}
+                ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white' 
+                : 'border-light-gray text-dark-gray hover:bg-off-white'}
             >
               {tech}
             </Button>
@@ -167,10 +167,9 @@ console.log(filteredProjects,"filteredProjects")
           {filteredProjects.map((project) => (
             <Card 
               key={project.id} 
-              className="bg-black/30 border border-white/10 hover:border-electric-blue/50 transition-all duration-300 hover:shadow-md overflow-hidden "
+              className="bg-pure-white border border-light-gray hover:border-pinkish-red/50 transition-all duration-300 hover:shadow-md overflow-hidden"
             >
               <div className="relative h-48 overflow-hidden">
-              
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -178,7 +177,7 @@ console.log(filteredProjects,"filteredProjects")
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-white">{project.title}</CardTitle>
+                <CardTitle className="text-dark-gray">{project.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-cool-gray mb-4">{project.description}</p>
@@ -187,19 +186,19 @@ console.log(filteredProjects,"filteredProjects")
                     <Badge 
                       key={index} 
                       variant="outline" 
-                      className="bg-black/50 text-cool-gray border-white/10"
+                      className="bg-off-white text-dark-gray border-light-gray"
                     >
                       {tech}
                     </Badge>
                   ))}
                 </div>
               </CardContent>
-              <CardFooter className="flex justify-between border-t border-white/10 pt-4">
+              <CardFooter className="flex gap-2">
                 {project.githubUrl && (
                   <Button 
                     size="sm" 
                     variant="outline" 
-                    className="border-white/20 text-white hover:bg-white/5"
+                    className="border-light-gray text-dark-gray hover:bg-off-white"
                     asChild
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -211,7 +210,7 @@ console.log(filteredProjects,"filteredProjects")
                 {project.liveUrl && (
                   <Button 
                     size="sm"
-                    className="bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90"
+                    className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-pure-white"
                     asChild
                   >
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
@@ -230,7 +229,7 @@ console.log(filteredProjects,"filteredProjects")
           <div className="text-center mt-12">
             <Button 
               variant="outline" 
-              className="border-white/20 text-white hover:bg-white/5" 
+              className="border-light-gray text-dark-gray hover:bg-off-white" 
               onClick={() => setActiveFilter('all')}
             >
               Show All Projects

@@ -76,7 +76,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-midnight-blue/90 backdrop-blur-md shadow-sm py-3' 
+        ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' 
         : 'bg-transparent py-5'
     }`}>
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,9 +84,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/03_23_2025_X-Design (3) (1).png" 
+              src="/lovable-uploads/New Project (22).png" 
               alt="Vortex Solution Logo" 
-              className="h-[60px]"
+              className="h-[80px]"
             />
           </Link>
 
@@ -97,20 +97,20 @@ const Header = () => {
                 {navItems.map((item) => 
                   item.hasSubmenu ? (
                     <NavigationMenuItem key={item.name} className="relative">
-                      <NavigationMenuTrigger className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200 bg-transparent px-3 py-2">
+                      <NavigationMenuTrigger className="font-medium text-sm text-gray-900 hover:text-pinkish-red transition-colors duration-200 bg-transparent px-3 py-2">
                         {item.name}
                       </NavigationMenuTrigger>
-                      <NavigationMenuContent className="bg-midnight-blue/95 backdrop-blur-md border-gray-800">
+                      <NavigationMenuContent className="bg-white/95 backdrop-blur-md border-gray-200">
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                           {serviceItems.map((service) => (
                             <li key={service.name} className="col-span-1">
                               <NavigationMenuLink asChild>
                                 <Link
                                   to={service.href}
-                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-800/50 hover:text-electric-blue"
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-50 hover:text-pinkish-red"
                                 >
-                                  <div className="text-sm font-medium text-white">{service.name}</div>
-                                  <p className="line-clamp-2 text-sm leading-snug text-gray-400">
+                                  <div className="text-sm font-medium text-gray-900">{service.name}</div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-gray-600">
                                     {service.description}
                                   </p>
                                 </Link>
@@ -124,7 +124,7 @@ const Header = () => {
                     <NavigationMenuItem key={item.name} className="px-3 py-2">
                       <a
                         href={item.href}
-                        className="font-medium text-sm text-white hover:text-electric-blue transition-colors duration-200"
+                        className="font-medium text-sm text-gray-900 hover:text-pinkish-red transition-colors duration-200"
                       >
                         {item.name}
                       </a>
@@ -138,7 +138,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button
-              className="bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-neon-purple/30"
+              className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-pinkish-red/30"
               onClick={() => document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get a Quote
@@ -149,7 +149,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="flex items-center p-2 rounded-md text-white hover:text-electric-blue hover:bg-white/10"
+              className="flex items-center p-2 rounded-md text-gray-900 hover:text-pinkish-red hover:bg-gray-100"
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -158,26 +158,26 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden fixed top-[calc(100%)] left-0 right-0 max-h-[80vh] overflow-y-auto bg-midnight-blue/95 shadow-lg animate-fade-in z-50">
+          <div className="md:hidden fixed top-[calc(100%)] left-0 right-0 max-h-[80vh] overflow-y-auto bg-white/95 shadow-lg animate-fade-in z-50">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
                 <React.Fragment key={item.name}>
                   {item.hasSubmenu ? (
                     <div>
                       <button 
-                        className="w-full px-3 py-2 text-base font-medium text-white flex items-center justify-between rounded-md hover:bg-white/10 hover:text-electric-blue"
+                        className="w-full px-3 py-2 text-base font-medium text-gray-900 flex items-center justify-between rounded-md hover:bg-gray-100 hover:text-pinkish-red"
                         onClick={toggleServiceSubmenu}
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={`h-4 w-4 ml-1 transition-transform ${serviceSubmenuOpen ? 'rotate-180' : ''}`} />
                       </button>
                       {serviceSubmenuOpen && (
-                        <div className="pl-4 mt-1 space-y-1 bg-midnight-blue/30 rounded-md">
+                        <div className="pl-4 mt-1 space-y-1 bg-gray-50 rounded-md">
                           {serviceItems.map((service) => (
                             <Link
                               key={service.name}
                               to={service.href}
-                              className="block px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-electric-blue"
+                              className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-pinkish-red"
                               onClick={() => {
                                 setMobileMenuOpen(false);
                                 setServiceSubmenuOpen(false);
@@ -192,7 +192,7 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 hover:text-electric-blue"
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-100 hover:text-pinkish-red"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -202,7 +202,7 @@ const Header = () => {
               ))}
               <div className="px-3 py-3">
                 <Button
-                  className="w-full bg-gradient-to-r from-electric-blue to-neon-purple hover:opacity-90 text-white font-medium rounded-md px-4 py-2 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white font-medium rounded-md px-4 py-2 transition-all duration-300"
                   onClick={() => {
                     document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
                     setMobileMenuOpen(false);

@@ -115,10 +115,10 @@ const DedicatedDeveloper = () => {
     <ServicePageLayout
       title="Dedicated Developer Services"
       description="Access skilled developers tailored to your project requirements."
-      heroImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+      // heroImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
-      <section className="py-20 bg-black relative">
+      <section className="py-20  relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
@@ -128,7 +128,7 @@ const DedicatedDeveloper = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Why Hire a Dedicated Developer?
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Get access to top talent focused solely on your projects
             </p>
           </div>
@@ -140,7 +140,7 @@ const DedicatedDeveloper = () => {
                 icon={feature.icon}
                 title={feature.title}
                 description={feature.description}
-                image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1573497491765-dccce02b3982' : '1522252234503-e356532cafd5'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
+                // image={index < 2 ? `https://images.unsplash.com/photo-${index === 0 ? '1573497491765-dccce02b3982' : '1522252234503-e356532cafd5'}?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80` : undefined}
             />
             ))}
           </div>
@@ -148,13 +148,13 @@ const DedicatedDeveloper = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-black/90 relative section-fade-in">
+      <section className="py-20 /90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               What Our Clients Say
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Hear from businesses that have transformed their development process
             </p>
           </div>
@@ -175,13 +175,13 @@ const DedicatedDeveloper = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-black/90 relative section-fade-in">
+      <section className="py-20 /90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Dedicated Developer Packages
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Choose the package that best suits your project needs
             </p>
           </div>
@@ -209,13 +209,13 @@ const DedicatedDeveloper = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-black relative section-fade-in">
+      <section className="py-20  relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Technology Expertise
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Our developers are proficient in a wide range of technologies
             </p>
           </div>
@@ -223,47 +223,47 @@ const DedicatedDeveloper = () => {
           <div className="glass-card p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-4">Frontend Technologies</h3>
+                <h3 className="text-xl font-semibold text-gray-600 mb-4">Frontend Technologies</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">React</span>
+                    <span className="text-gray-600">React</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">Vue.js</span>
+                    <span className="text-gray-600">Vue.js</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">Angular</span>
+                    <span className="text-gray-600">Angular</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">TypeScript</span>
+                    <span className="text-gray-600">TypeScript</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">Next.js</span>
+                    <span className="text-gray-600">Next.js</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">Tailwind</span>
+                    <span className="text-gray-600">Tailwind</span>
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-white mt-8 mb-4">Backend Technologies</h3>
+                <h3 className="text-xl font-semibold text-gray-600 mt-8 mb-4">Backend Technologies</h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">Node.js</span>
+                    <span className="text-gray-600">Node.js</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">PHP</span>
+                    <span className="text-gray-600">PHP</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">Python</span>
+                    <span className="text-gray-600">Python</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">Java</span>
+                    <span className="text-gray-600">Java</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">MongoDB</span>
+                    <span className="text-gray-600">MongoDB</span>
                   </div>
                   <div className="bg-pinkish-red/10 p-3 rounded-md text-center">
-                    <span className="text-white">SQL</span>
+                    <span className="text-gray-600">SQL</span>
                   </div>
                 </div>
               </div>
@@ -281,48 +281,48 @@ const DedicatedDeveloper = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-black relative section-fade-in">
+      <section className="py-20  relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-300">
+            <p className="text-lg text-gray-600">
               Answers to common questions about our dedicated developer services
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-white mb-2">What is a dedicated developer?</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">What is a dedicated developer?</h3>
+              <p className="text-gray-600 mb-4">
                 A dedicated developer is a software engineer who works exclusively on your projects, providing focused attention and expertise.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mb-2">How do you match developers to projects?</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">How do you match developers to projects?</h3>
+              <p className="text-gray-600 mb-4">
                 We carefully assess your project requirements and tech stack to match you with a developer who has the right skills and experience.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mb-2">What if I'm not satisfied with the developer?</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">What if I'm not satisfied with the developer?</h3>
+              <p className="text-gray-600 mb-4">
                 We offer a satisfaction guarantee. If you're not happy with your developer, we'll find a replacement at no additional cost.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-white mb-2">What communication tools do you use?</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">What communication tools do you use?</h3>
+              <p className="text-gray-600 mb-4">
                 We use a variety of communication tools, including email, Slack, and video conferencing, to ensure seamless collaboration.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mb-2">How do you ensure code quality?</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">How do you ensure code quality?</h3>
+              <p className="text-gray-600 mb-4">
                 We follow industry best practices for code quality, including code reviews, testing, and continuous integration.
               </p>
 
-              <h3 className="text-xl font-semibold text-white mb-2">Can I scale my team up or down as needed?</h3>
-              <p className="text-gray-300 mb-4">
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">Can I scale my team up or down as needed?</h3>
+              <p className="text-gray-600 mb-4">
                 Yes, we offer flexible contract options that allow you to scale your team up or down as your project needs evolve.
               </p>
             </div>
