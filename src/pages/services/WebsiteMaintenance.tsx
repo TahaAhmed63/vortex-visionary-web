@@ -3,6 +3,7 @@ import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
 import { Shield, RefreshCw, Clock, Database, BarChart, Settings } from 'lucide-react';
+import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const WebsiteMaintenance = () => {
   useEffect(() => {
@@ -293,6 +294,7 @@ const WebsiteMaintenance = () => {
           </div>
         </div>
       </section>
+      <QuoteFormSection />
     </ServicePageLayout>
   );
 };

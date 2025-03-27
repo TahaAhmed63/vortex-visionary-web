@@ -69,7 +69,7 @@ const ServicePageLayout = ({
                   <Button 
                     variant="outline" 
                     size="lg"
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => window.location.href = '/contact'}
                   >
                     Contact Us
                   </Button>

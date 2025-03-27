@@ -115,7 +115,7 @@ const DedicatedDeveloper = () => {
     <ServicePageLayout
       title="Dedicated Developer Services"
       description="Access skilled developers tailored to your project requirements."
-      // heroImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+      heroImage="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
       <section className="py-20  relative">
@@ -329,6 +329,7 @@ const DedicatedDeveloper = () => {
           </div>
         </div>
       </section>
+      <QuoteFormSection />
     </ServicePageLayout>
   );
 };

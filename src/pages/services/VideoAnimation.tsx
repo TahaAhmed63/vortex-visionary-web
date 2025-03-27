@@ -287,6 +287,7 @@ const VideoAnimation = () => {
           </div>
         </div>
       </section>
+      <QuoteFormSection />
     </ServicePageLayout>
   );
 };

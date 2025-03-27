@@ -92,7 +92,7 @@ const ServicesSection = () => {
       icon: <Smartphone className="w-7 h-7" />,
       title: "Mobile App Development",
       description: "Native and cross-platform mobile applications that engage users and deliver real value.",
-      linkTo: "/services/mobile-development"
+      linkTo: "/services/mobile-app-development"
     },
     {
       icon: <Server className="w-7 h-7" />,

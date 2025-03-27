@@ -5,6 +5,7 @@ import PricingPackage, { PricingFeature } from '@/components/services/PricingPac
 import ServiceFeature from '@/components/services/ServiceFeature';
 import Testimonial from '@/components/services/Testimonial';
 import { Megaphone, BarChart2, Target, Users, Share2, Smartphone } from 'lucide-react';
+import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const DigitalMarketing = () => {
   useEffect(() => {
@@ -289,6 +290,7 @@ const DigitalMarketing = () => {
           </div>
         </div>
       </section>
+      <QuoteFormSection />
     </ServicePageLayout>
   );
 };

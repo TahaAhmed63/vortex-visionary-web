@@ -16,6 +16,10 @@ import DedicatedDeveloper from "./pages/services/DedicatedDeveloper";
 
 // Remove unused CSS
 import "./index.css";
+import CrmDevelopment from "./pages/services/CrmDevelopment";
+import MobileAppDevelopment from "./pages/services/MobileAppDevelopment";
+import AiDrivenSolution from "./pages/services/AiDrivenSolution";
+import ContactUs from "./pages/ContactUs";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +37,11 @@ const App = () => (
           <Route path="/services/website-maintenance" element={<WebsiteMaintenance />} />
           <Route path="/services/video-animation" element={<VideoAnimation />} />
           <Route path="/services/dedicated-developer" element={<DedicatedDeveloper />} />
+          <Route path="/services/crm-development" element={<CrmDevelopment />} />  
+          <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
+          <Route path="/services/ai-solutions" element={<AiDrivenSolution />} />
+          <Route path="/contact" element={<ContactUs />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

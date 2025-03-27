@@ -42,7 +42,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
-              Leverage the power of AI-driven technologies to accelerate growth, enhance customer experience, and streamline operations.
+              Discover innovative solutions in digital marketing and software development to enhance your business operations.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
@@ -107,15 +107,15 @@ const HeroSection = () => {
                 <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] bg-black/80 backdrop-blur-xl rounded-xl p-4 border border-pinkish-red/30">
                   <div className="grid grid-cols-3 gap-4">
                     <div className="text-center">
-                      <p className="text-gray-400 text-xs">Growth</p>
+                      <p className="text-gray-600 text-xs">Growth</p>
                       <p className="text-pinkish-red font-bold text-xl">+147%</p>
                     </div>
                     <div className="text-center border-x border-pinkish-red/20">
-                      <p className="text-gray-400 text-xs">Projects</p>
+                      <p className="text-gray-600 text-xs">Projects</p>
                       <p className="text-white font-bold text-xl">250+</p>
                     </div>
                     <div className="text-center">
-                      <p className="text-gray-400 text-xs">Retention</p>
+                      <p className="text-gray-600 text-xs">Retention</p>
                       <p className="text-pinkish-red font-bold text-xl">98%</p>
                     </div>
                   </div>
@@ -129,7 +129,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium text-sm">AI Powered</p>
-                      <p className="text-gray-400 text-xs">Next-gen solutions</p>
+                      <p className="text-gray-600 text-xs">Next-gen solutions</p>
                     </div>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium text-sm">Premium Quality</p>
-                      <p className="text-gray-400 text-xs">Industry leading</p>
+                      <p className="text-gray-600 text-xs">Industry leading</p>
                     </div>
                   </div>
                 </div>
