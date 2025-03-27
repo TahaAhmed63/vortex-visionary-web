@@ -41,7 +41,7 @@ const HeroSection = () => {
               Transform Your <span className="text-gradient">Digital</span> Experience
             </h1>
             
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
               Leverage the power of AI-driven technologies to accelerate growth, enhance customer experience, and streamline operations.
             </p>
             
@@ -82,7 +82,7 @@ const HeroSection = () => {
                     <Star key={i} className="w-4 h-4 text-pinkish-red fill-pinkish-red" />
                   ))}
                 </div>
-                <span className="ml-2 text-sm text-gray-300">
+                <span className="ml-2 text-sm text-gray-600">
                   <span className="font-bold">4.9/5</span> from 200+ reviews
                 </span>
               </div>
@@ -98,7 +98,7 @@ const HeroSection = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-pinkish-red/50 to-pinkish-red-light/50 rounded-2xl blur opacity-20"></div>
               <div className="relative glass-card p-1 rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1470&q=80" 
+                  src="/lovable-uploads/photo-1581091226825-a6a2a5aee158.avif" 
                   alt="AI-Driven Solutions" 
                   className="w-full h-auto rounded-xl"
                 />

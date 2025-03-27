@@ -60,7 +60,7 @@ const BlogSection = () => {
               <span className="text-sm font-medium text-pinkish-red">Blog & Insights</span>
             </div>
             <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-              Latest from Our Blog
+              Latest from <span className='text-pinkish-red'>  Our Blog</span>
             </h2>
             <p className="section-subtitle max-w-2xl">
               Expert insights, industry trends, and thought leadership on all things tech and digital marketing

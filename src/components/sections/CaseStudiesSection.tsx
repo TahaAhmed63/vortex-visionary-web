@@ -85,7 +85,7 @@ const CaseStudiesSection = () => {
             <span className="text-sm font-medium text-pinkish-red">Success Stories</span>
           </div>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-            Our Work Speaks For Itself
+            Our Work  <span className='text-pinkish-red'> Speaks For Itself</span>
           </h2>
           <p className="section-subtitle">
             Explore how we've helped businesses achieve remarkable results with our custom solutions
@@ -121,14 +121,14 @@ const CaseStudiesSection = () => {
                     
                     {/* Content Side */}
                     <div className="p-6 lg:p-10 flex flex-col">
-                      <div className="mb-2 text-sm text-gray-400">Client: {study.client}</div>
+                      <div className="mb-2 text-sm text-gray-600">Client: {study.client}</div>
                       <h3 className="text-2xl font-bold  mb-4">{study.title}</h3>
                       <p className="text-gray-600 mb-6 flex-grow">{study.description}</p>
                       
                       <div className="grid grid-cols-3 gap-4 mb-6">
                         {study.results.map((result, index) => (
-                          <div key={index} className="text-center p-3 bg-black/70 rounded-lg border border-pinkish-red/20">
-                            <p className="text-gray-400 text-xs">{result.label}</p>
+                          <div key={index} className="text-center p-3 bg-pinkish-red/30 rounded-lg border border-pinkish-red/20">
+                            <p className="text-gray-600 text-xs">{result.label}</p>
                             <p className="text-pinkish-red font-bold text-xl">{result.value}</p>
                           </div>
                         ))}
@@ -172,7 +172,7 @@ const CaseStudiesSection = () => {
                 <ArrowLeft className="h-5 w-5" />
               </Button>
               <Button
-                variant="outline"
+                variant="default"
                 size="icon"
                 onClick={nextSlide}
                 className="rounded-full h-10 w-10"

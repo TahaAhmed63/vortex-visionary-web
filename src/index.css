@@ -83,7 +83,7 @@
   }
 
   .feature-card {
-    @apply relative overflow-hidden bg-[#f1e2e2] p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 
+    @apply relative overflow-hidden bg-[#9233ff24] p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 
     border border-pinkish-red/20 hover:border-pinkish-red/40 hover:bg-off-white;
   }
   

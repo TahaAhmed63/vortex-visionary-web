@@ -14,7 +14,7 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-pinkish-red/30 bg-black/40 text-white hover:bg-pinkish-red/20 hover:border-pinkish-red/60",
+        "border border-pinkish-red/30 bg-white text-black relative before:absolute before:inset-0 before:bg-pinkish-red/20 before:origin-bottom before:scale-y-0 hover:before:scale-y-100 before:transition-transform before:duration-500 before:ease-out before:-z-10 hover:border-pinkish-red/60 before:rounded-full hover:text-black/80 overflow-hidden",
         secondary:
           "bg-muted text-white hover:bg-muted/80",
         ghost: "hover:bg-pinkish-red/10 hover:text-white",

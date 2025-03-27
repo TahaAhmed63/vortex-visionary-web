@@ -121,7 +121,7 @@ console.log(filteredProjects,"filteredProjects")
             Our Work
           </span>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-            Featured Projects
+            Featured <span className='text-pinkish-red'>  Projects</span>
           </h2>
           <p className="mt-4 text-xl text-cool-gray">
             Explore our portfolio of innovative solutions across various technologies
@@ -134,8 +134,8 @@ console.log(filteredProjects,"filteredProjects")
             variant={activeFilter === 'all' ? 'default' : 'outline'} 
             onClick={() => setActiveFilter('all')}
             className={activeFilter === 'all' 
-              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white' 
-              : 'border-light-gray text-dark-gray hover:bg-off-white'}
+              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white bg-white' 
+              : 'border-light-gray text-dark-gray hover:bg-white'}
           >
             All Projects
           </Button>
@@ -143,8 +143,8 @@ console.log(filteredProjects,"filteredProjects")
             variant={activeFilter === 'featured' ? 'default' : 'outline'} 
             onClick={() => setActiveFilter('featured')}
             className={activeFilter === 'featured' 
-              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white' 
-              : 'border-light-gray text-dark-gray hover:bg-off-white'}
+              ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white bg-white' 
+              : 'border-light-gray text-dark-gray hover:bg-white'}
           >
             Featured
           </Button>
@@ -154,8 +154,8 @@ console.log(filteredProjects,"filteredProjects")
               variant={activeFilter === tech ? 'default' : 'outline'} 
               onClick={() => setActiveFilter(tech)}
               className={activeFilter === tech 
-                ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white' 
-                : 'border-light-gray text-dark-gray hover:bg-off-white'}
+                ? 'bg-pinkish-red hover:bg-pinkish-red-dark text-pure-white bg-white' 
+                : 'border-light-gray text-dark-gray hover:bg-white'}
             >
               {tech}
             </Button>
@@ -186,7 +186,7 @@ console.log(filteredProjects,"filteredProjects")
                     <Badge 
                       key={index} 
                       variant="outline" 
-                      className="bg-off-white text-dark-gray border-light-gray"
+                      className="bg-white text-dark-gray border-light-gray"
                     >
                       {tech}
                     </Badge>
@@ -198,7 +198,7 @@ console.log(filteredProjects,"filteredProjects")
                   <Button 
                     size="sm" 
                     variant="outline" 
-                    className="border-light-gray text-dark-gray hover:bg-off-white"
+                    className="border-light-gray text-dark-gray hover:bg-white"
                     asChild
                   >
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -229,7 +229,7 @@ console.log(filteredProjects,"filteredProjects")
           <div className="text-center mt-12">
             <Button 
               variant="outline" 
-              className="border-light-gray text-dark-gray hover:bg-off-white" 
+              className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white" 
               onClick={() => setActiveFilter('all')}
             >
               Show All Projects

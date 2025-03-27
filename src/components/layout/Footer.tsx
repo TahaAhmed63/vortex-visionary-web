@@ -87,7 +87,7 @@ const Footer = () => {
               <Input
                 type="email"
                 placeholder="Your email address"
-                className="bg-gray-800 border-gray-700 text-gray-600 placeholder:text-gray-500 focus:border-blue-500"
+                className="bg-white border-gray-700 text-gray-600 placeholder:text-gray-500 focus:border-blue-500"
               />
               <Button
                 className="bg-gradient-to-r from-pinkish-red to-pinkish-red-light hover:opacity-90 text-white font-medium rounded-md px-6 py-2.5 transition-all duration-300 shadow-md hover:shadow-pinkish-red/30"

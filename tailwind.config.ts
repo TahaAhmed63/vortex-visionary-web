@@ -66,7 +66,7 @@ export default {
 				'black': '#000000',
 				'dark-black': '#121212',
 				'pinkish-red': '#0066FF',
-				'pinkish-red-light': '#FF6699',
+				'pinkish-red-light': '#B366FF',
 				'pinkish-red-dark': '#CC2952',
 				'pure-white': '#FFFFFF',
 				'off-white': '#F5F5F5',

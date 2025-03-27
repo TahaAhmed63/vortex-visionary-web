@@ -57,7 +57,7 @@ const ContactSection = () => {
             <span className="text-sm font-medium text-pinkish-red">Get in Touch</span>
           </div>
           <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-            Contact Us
+            Contact <span className='text-pinkish-red'>  Us</span>
           </h2>
           <p className="section-subtitle max-w-2xl mx-auto">
             Have a question or ready to start your next project? Reach out to us today

@@ -18,7 +18,7 @@ const ServiceCard = ({ icon, title, description, delay, linkTo }: ServiceCardPro
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex flex-col h-full">
-        <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-pinkish-red/10 text-pinkish-red transition-all duration-300 group-hover:bg-pinkish-red group-hover:text-white">
+        <div className="mb-5 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-pinkish-red/10 text-pinkish-red transition-all duration-300 group-hover:bg-pinkish-red-light group-hover:text-white">
           {icon}
         </div>
         <h3 className="mb-3 text-xl font-semibold text-gray-900">{title}</h3>
@@ -116,7 +116,7 @@ const ServicesSection = () => {
             <span className="text-sm font-medium text-pinkish-red">Our Services</span>
           </div>
           <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-            Comprehensive Digital Solutions
+            Comprehensive <span className='text-pinkish-red'> Digital Solutions</span>
           </h2>
           <p className="section-subtitle text-gray-600">
             We offer a full spectrum of services to help businesses thrive in the digital age

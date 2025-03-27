@@ -84,7 +84,7 @@ const TestimonialsSection = () => {
             <span className="text-sm font-medium text-pinkish-red">Testimonials</span>
           </div>
           <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
-            What Our Clients Say
+            What Our <span className='text-pinkish-red'> Clients Say</span>
           </h2>
           <p className="section-subtitle">
             Don't just take our word for it — hear from some of our satisfied clients
