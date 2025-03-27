@@ -3,6 +3,7 @@ import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
 import { Search, BarChart, Target, Globe, Layers, ArrowUp } from 'lucide-react';
+import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const SEO = () => {
   useEffect(() => {

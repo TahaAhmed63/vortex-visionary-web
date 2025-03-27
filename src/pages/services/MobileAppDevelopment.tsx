@@ -7,6 +7,7 @@ import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
 import Testimonial from '@/components/services/Testimonial';
+import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const MobileAppDevelopment = () => {
     useEffect(() => {

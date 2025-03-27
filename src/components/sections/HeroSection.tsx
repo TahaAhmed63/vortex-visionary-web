@@ -64,7 +64,7 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <div className="flex items-center justify-center lg:justify-start space-x-8 pt-4">
+            {/* <div className="flex items-center justify-center lg:justify-start space-x-8 pt-4">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-10 h-10 rounded-full border-2 border-black overflow-hidden">
@@ -86,7 +86,7 @@ const HeroSection = () => {
                   <span className="font-bold">4.9/5</span> from 200+ reviews
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Hero image */}

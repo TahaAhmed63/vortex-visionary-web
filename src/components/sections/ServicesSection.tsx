@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { Brain, Users, Code, TrendingUp, Server, Smartphone, ArrowRight } from 'lucide-react';
+import { Brain, Users, Code, TrendingUp, Server, Smartphone, ArrowRight, Video, Search, Settings } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 
@@ -72,15 +72,15 @@ const ServicesSection = () => {
     },
     {
       icon: <TrendingUp className="w-7 h-7" />,
-      title: "Digital Marketing",
+      title: "Digital Marketing", 
       description: "Strategic marketing campaigns leveraging AI to target your ideal customers and maximize ROI.",
       linkTo: "/services/digital-marketing"
     },
     {
-      icon: <Users className="w-7 h-7" />,
-      title: "CRM Development",
-      description: "Custom CRM solutions to manage customer relationships, track interactions, and boost satisfaction.",
-      linkTo: "/services/crm-development"
+      icon: <Search className="w-7 h-7" />,
+      title: "SEO",
+      description: "Enhance your online visibility and drive organic traffic to your website.",
+      linkTo: "/services/seo"
     },
     {
       icon: <Code className="w-7 h-7" />,
@@ -89,16 +89,34 @@ const ServicesSection = () => {
       linkTo: "/services/web-development"
     },
     {
+      icon: <Settings className="w-7 h-7" />,
+      title: "Website Maintenance",
+      description: "Regular updates and security for optimal website performance.",
+      linkTo: "/services/website-maintenance"
+    },
+    {
       icon: <Smartphone className="w-7 h-7" />,
       title: "Mobile App Development",
       description: "Native and cross-platform mobile applications that engage users and deliver real value.",
       linkTo: "/services/mobile-app-development"
     },
     {
-      icon: <Server className="w-7 h-7" />,
-      title: "Cloud Infrastructure",
-      description: "Scalable, secure cloud solutions that grow with your business and optimize performance.",
-      linkTo: "/services/cloud-infrastructure"
+      icon: <Users className="w-7 h-7" />,
+      title: "Dedicated Developer",
+      description: "Hire skilled developers tailored to your project requirements.",
+      linkTo: "/services/dedicated-developer"
+    },
+    {
+      icon: <Video className="w-7 h-7" />,
+      title: "Video Animation",
+      description: "Create engaging and informative explainer videos for your business.",
+      linkTo: "/services/video-animation"
+    },
+    {
+      icon: <Users className="w-7 h-7" />,
+      title: "CRM Development",
+      description: "Custom CRM solutions to manage customer relationships, track interactions, and boost satisfaction.",
+      linkTo: "/services/crm-development"
     }
   ];
 

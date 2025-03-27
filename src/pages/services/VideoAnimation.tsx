@@ -3,6 +3,7 @@ import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import ServiceFeature from '@/components/services/ServiceFeature';
 import { Button } from "@/components/ui/button";
 import { Video, Mic, Edit, Palette, Play, FileText, PenTool } from 'lucide-react';
+import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const VideoAnimation = () => {
   useEffect(() => {

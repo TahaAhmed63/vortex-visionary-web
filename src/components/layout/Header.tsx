@@ -158,7 +158,7 @@ const Header = () => {
 
         {/* Mobile Navigation Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden fixed top-[calc(100%)] left-0 right-0 max-h-[80vh] overflow-y-auto bg-white/95 shadow-lg animate-fade-in z-50">
+          <div className="md:hidden fixed left-0 right-0 max-h-[80vh] overflow-y-auto bg-white/95 shadow-lg animate-fade-in z-50">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navItems.map((item) => (
                 <React.Fragment key={item.name}>

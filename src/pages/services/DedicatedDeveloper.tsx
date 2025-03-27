@@ -4,6 +4,7 @@ import PricingPackage, { PricingFeature } from '@/components/services/PricingPac
 import ServiceFeature from '@/components/services/ServiceFeature';
 import Testimonial from '@/components/services/Testimonial';
 import { UserPlus, Code, Lightbulb, Clock, MessageSquare, CheckCircle } from 'lucide-react';
+import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const DedicatedDeveloper = () => {
   useEffect(() => {
