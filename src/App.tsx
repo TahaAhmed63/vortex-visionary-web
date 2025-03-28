@@ -40,7 +40,7 @@ const App = () => (
           <Route path="/services/crm-development" element={<CrmDevelopment />} />  
           <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
           <Route path="/services/ai-solutions" element={<AiDrivenSolution />} />
-          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/contact" element={<ContactUs />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
