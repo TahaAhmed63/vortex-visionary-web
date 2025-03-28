@@ -50,14 +50,14 @@ const ContactUs = () => {
     <Header />
     <section id="contact" className="py-20 bg-white relative">
       {/* Background decorations */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden mt-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
       </div>
 
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
+          <div className="inline-flex items-center px-3  py-1.5 rounded-full bg-pinkish-red/10 border border-pinkish-red/30 mb-4">
             <span className="text-sm font-medium text-pinkish-red">Get in Touch</span>
           </div>
           <h2 className="section-title mt-3 text-3xl md:text-4xl font-bold text-dark-gray">
