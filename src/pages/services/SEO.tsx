@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
 import ServiceFeature from '@/components/services/ServiceFeature';
-import { Search, BarChart, Target, Globe, Layers, ArrowUp } from 'lucide-react';
+import { Search, BarChart, Target, Globe, Layers, ArrowUp, Link as LinkIcon, Award, Zap } from 'lucide-react';
 import QuoteFormSection from '@/components/sections/QuoteFormSection';
 
 const SEO = () => {
@@ -108,7 +108,7 @@ const SEO = () => {
       heroImage="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
     >
       {/* Features Section */}
-      <section className="py-20  relative">
+      <section className="py-20 relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-pinkish-red/20 rounded-full blur-[100px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-pinkish-red/10 rounded-full blur-[100px] opacity-20"></div>
@@ -137,8 +137,69 @@ const SEO = () => {
         </div>
       </section>
 
+      {/* Link Building Section */}
+      <section className="py-20 bg-gray-800 relative section-fade-in">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              No Rankings Yet? Start with <span className="text-pinkish-red">Link Building</span>
+            </h2>
+            <p className="text-lg text-gray-300">
+              Building quality backlinks is the foundation of getting your website recognized by search engines
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" 
+                alt="Link Building Strategy"
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-pinkish-red text-white">
+                    <LinkIcon className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-white">Quality Backlink Building</h3>
+                  <p className="text-gray-300">We build high-authority backlinks from relevant websites in your industry to boost your domain authority and search visibility.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-pinkish-red text-white">
+                    <Award className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-white">Content Strategy</h3>
+                  <p className="text-gray-300">We create linkable assets and compelling content that naturally attracts backlinks and builds your site's authority.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 mr-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-pinkish-red text-white">
+                    <Zap className="w-6 h-6" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-white">Results Tracking</h3>
+                  <p className="text-gray-300">We monitor your backlink profile growth and track improvements in search visibility with detailed monthly reports.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
-      <section className="py-20 /90 relative section-fade-in">
+      <section className="py-20 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
@@ -182,7 +243,7 @@ const SEO = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-20  relative section-fade-in">
+      <section className="py-20 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
@@ -233,7 +294,7 @@ const SEO = () => {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-20  relative section-fade-in">
+      <section className="py-20 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">

@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import ServicePageLayout from '@/components/layout/ServicePageLayout';
 import PricingPackage, { PricingFeature } from '@/components/services/PricingPackage';
@@ -237,9 +236,9 @@ const WebDevelopment = () => {
           </div>
         </div>
       </section>
-<QuoteFormSection/>
+      <QuoteFormSection/>
       {/* Pricing Section */}
-      {/* <section className="py-20 /90 relative section-fade-in">
+      <section className="py-20 /90 relative section-fade-in">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">
@@ -262,7 +261,7 @@ const WebDevelopment = () => {
             <PricingPackage 
               title="Business Package" 
               price="$1,500 USD"
-              popular={true}
+              highlighted={true}
               description="Ideal for growing businesses with more advanced requirements"
               features={businessFeatures}
               ctaText="Choose Business"
@@ -277,7 +276,7 @@ const WebDevelopment = () => {
             />
           </div>
         </div>
-      </section> */}
+      </section>
     </ServicePageLayout>
   );
 };
